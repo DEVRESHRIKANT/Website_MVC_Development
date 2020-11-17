@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e048fb03-986b-4d61-abdf-0235faeed317" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16507/ShreeClients.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ShreeClients.xsd" MetadataType="Schema" ID="03701208-6592-4a27-b321-18969b105b8e" SourceId="1" SourceUrl="http://localhost:16507/ShreeClients.svc?xsd=xsd1" />
+    <MetadataFile FileName="ShreeClients.disco" MetadataType="Disco" ID="6e864dae-ac58-45aa-9384-16101bbbe904" SourceId="1" SourceUrl="http://localhost:16507/ShreeClients.svc?disco" />
+    <MetadataFile FileName="ShreeClients.wsdl" MetadataType="Wsdl" ID="08cd2463-2067-4478-9a80-215a05728108" SourceId="1" SourceUrl="http://localhost:16507/ShreeClients.svc?wsdl" />
+    <MetadataFile FileName="ShreeClients1.xsd" MetadataType="Schema" ID="c89da001-106c-4540-83a2-f70afd7eb576" SourceId="1" SourceUrl="http://localhost:16507/ShreeClients.svc?xsd=xsd2" />
+    <MetadataFile FileName="ShreeClients2.xsd" MetadataType="Schema" ID="f6f2afdf-7862-4109-833a-f57dbcc9727b" SourceId="1" SourceUrl="http://localhost:16507/ShreeClients.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

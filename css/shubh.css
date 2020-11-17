@@ -1,0 +1,78 @@
+﻿body {
+  }
+div{
+    position: relative;
+    }
+img{
+    height:100px;
+    width:100px;    
+    }
+.shubh_Image
+{
+ float: right;
+}
+.shubh_Designation
+{
+float:left;
+}
+footer-link 
+    {
+    
+    }
+.shubh-top-bar {
+/*    position: absolute;
+*/    height:100px;
+    width: 100%;
+    border:solid;
+}
+.shubh-left-top {
+/*    top: 0;
+*/    height: 100px;
+    width: 100px;
+    position: absolute;
+/**/
+    
+}
+.shubh-middle-top {
+    height: 100px;
+    text-align:center;
+}
+.shubh-right-top {
+    top:0; 
+    height: 100px;
+    position: absolute;
+    right: 5px;
+}
+.shubh-right-bar
+{
+    border:solid;
+/*    position: fixed;
+*/
+}
+.shubh-left-bar {
+/*    position: fixed;
+    
+*/
+border:solid;
+}
+.shubh-menu-bar 
+{
+/*    position: fixed;
+*/    width:100%;
+      border:solid;
+      height:auto;
+
+}
+.shubh-status-bar
+{
+/*    position:fixed;
+*/    width:100%;
+      border:solid;
+}
+.bottom-bar
+{
+    height:50px;
+    width:100%;
+    border:solid;
+}
+

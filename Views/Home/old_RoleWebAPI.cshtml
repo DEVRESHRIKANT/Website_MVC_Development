@@ -1,0 +1,89 @@
+﻿@model Devre.Models.tbl_UserRole
+
+@{
+    ViewBag.Title = "RoleWebAPI";
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+
+<h2>RoleWebAPI</h2>
+<div id="body">
+    <section>
+        <h2>Add Record</h2>
+        RoleId:<input id="RoleId" type="text" />
+        RoleName:<input id="RoleName" type="text" /><br />
+        @*ModifiedDate:<input id="ModifiedDate" type="text" />
+        Status:<input id="Status" type="text" /><br />*@
+        <input id="addItem" type="button" value="AddRecord" />
+    </section>
+
+    <section>
+        <br />
+        <br />
+        <h2>Update Record</h2>
+        RoleId：<input id="RoleId" type="text" /><br />
+        RoleName:<input id="RoleName" type="text" /><br />
+        @*ModifiedDate:<input id="ModifiedDate" type="text" />
+        Status:<input id="Status" type="text" /><br />*@
+        <input id="editItem" type="button" value="UpdateRecord" />
+    </section>
+
+</div>
+<!--javascript-->
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+        //create a model to save input data
+        var tbl_UserRole = {
+            create: function () {
+                RoleId: "";
+                RoleName: "";
+                ModifiedDate: DateTime;
+                status: Boolean(true);
+                return tbl_UserRole;
+            }
+        }
+        //Add a record. method:POST  url:  /api/Products
+        //Request PostProduct(Product item) method in ProductsController
+        $("#addItem").click(function () {
+            var newProduct = tbl_UserRole.create();
+            newProduct.RoleId = $("#RoleId").val();
+            newProduct.RoleName = $("#RoleName").val();
+            newProduct.ModifiedDate = DateTime;   // $("#ModifiedDate").val();
+            newProduct.status = Boolean(true);  // $("#status").val();
+
+            $.ajax({
+                url: "/api/UserRoles",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(newProduct),
+                success: function () {
+                    alert("Success！");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Request failed，info：" + textStatus + "  " + errorThrown);
+                }
+            });
+        });
+
+        //update a record. method:PUT  url:  /api/Products/Id
+        //Request PutProduct(int id, Product product) method in ProductsController
+        $("#editItem").click(function () {
+            var newProduct = tbl_UserRole.create();
+            newProduct.RoleId = $("#RoleId2").val();
+            newProduct.RoleName = $("#RoleName2").val();
+            newProduct.ModifiedDate = DateTime; // $("#ModifiedDate2").val();
+            newProduct.status = Boolean(true); //$("#status2").val();
+
+            $.ajax({
+                url: "/api/UserRoles/" + $("#RoleId2").val(),
+                type: "PUT",
+                data: JSON.stringify(newProduct),
+                contentType: "application/json; charset=urf-8",
+                success: function () {
+                    alert("Success！ ");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Request failed，info：" + textStatus + "  " + errorThrown);
+                }
+            });
+        });
+</script>

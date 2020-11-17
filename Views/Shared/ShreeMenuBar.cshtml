@@ -1,0 +1,198 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")
+
+    @*<link href="/content/foundation.min.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/foundation.min.js" type="text/javascript"></script>
+    <script>
+        $(document).foundation();
+    </script>*@
+
+    <style type="text/css">
+        ul {
+            list-style: none;
+            font-size: large;
+        }
+
+        li {
+        }
+
+        ul li {
+            display: block;
+            position: relative;
+            float: left;
+            border: 1px solid #000;
+        }
+
+        li ul {
+            display: none;
+        }
+
+        ul li a {
+            display: block;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #ff6a00;
+        }
+
+            ul li a:hover {
+                background: yellow;
+            }
+
+        li:hover ul {
+            display: block;
+            position: absolute;
+        }
+
+        li:hover li {
+            float: none;
+            margin: 0px;
+        }
+
+        li:hover a {
+        }
+
+        li:hover li a:hover {
+            background: yellow;
+        }
+
+        #drop-nav li ul li {
+            border-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ShreeMenuBar" style="width:auto; padding:0px">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+                <ul>
+                    <li><a href="~/Devre_Home_Web.aspx">ASP Home</a></li>
+                    <li><a href="~/Home">Motel Home</a></li>
+                    <li><a href="~/Home/ShrikantDevre">Shrikant</a></li>
+                    @*<li><a href="~/Home">Motel Web</a></li>*@
+                </ul>
+            </li>
+            <li>
+                <a href="#">Account</a>
+                <ul>
+                    <li><a href="/Role/AddUserRole">Role Register</a></li>
+                    <li><a href="~/UserRegistration.aspx">User Register</a></li>
+                    <li><a href="~/ProjectRegistration.aspx">Project Register</a></li>
+                    <li><a href="~/User_Project_Assignment.aspx">Project User Assign</a></li>
+                    <li><a href="~/Referrals.aspx">Referrals</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Reports</a>
+                <ul>
+                    <li><a href="/Role/GetAllUserRoles">Role Report</a></li>
+                    <li><a href="~/UserReport.aspx">User Report</a></li>
+                    <li><a href="~/PersonalVideos.aspx">Personal Video</a></li>
+                    <li><a href="~/ProjectReport.aspx">Project Report</a></li>
+                </ul>
+            </li>
+            @*<li>
+                <a href="#">Education</a>
+                <ul>
+                    <li><a href="~/ShreeDocs/India_Shrikant_Degree_Certificate.pdf">Bachelor Degree </a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_BhavansDegree.pdf">Computer Management </a> </li>
+                    <li><a href="~/ShreeDocs/MBA_Marksheet.pdf">Project Management </a> </li>
+                    <li><a href="~/ShreeDocs/USA_Shrikant_Evaluation_Degree.pdf">USA Evaluation </a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_SSC_Hindi.pdf">Hindi Language </a> </li>
+                    <li><a href="~/ShreeDocs/MBA_Marksheet.pdf">MBA Marksheet</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_FYBSc_MarkSheet.pdf">FY.B.Sc.Marksheet</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_School_HSc_MarkSheet1.pdf">H.Sc. Marksheet</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_School_SSc_MarkSheet.pdf">SSC Marksheet</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_SSc_Credit.pdf">SSC Cedit</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_School_LeavingCertificate.pdf">SSC School Leaving</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_SYBSc_MarkSheet.pdf">SY.B.Sc. Marksheet</a> </li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_TYBSc_MarkShreet.pdf">TY.B.Sc. Marksheet</a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Certification</a>
+                <ul>
+                    <li><a href="~/ShreeDocs/Microsoft_MCSD2.pdf">Microsoft Certified</a></li>
+                    <li><a href="~/ShreeDocs/Canada_PMP_Course_Certificate.PDF">PMP Course</a></li>
+                    <li><a href="~/ShreeDocs/USA_Experience_K-Force_CSharp_Assesment.pdf">CSharp Skill Assessment</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Canada</a>
+                <ul>
+                    <li><a href="~/ShreeDocs/Canada_Shrikant_CAN_Pass_2025.pdf">Passport</a></li>
+                    <li><a href="~/ShreeDocs/Canada_Shrikant_Canada_Landing.pdf">Canada Landing</a></li>
+                    <li><a href="~/ShreeDocs/Canada_Shrikant_Canada_PR-card.pdf">Pamanat Residence</a></li>
+                    <li><a href="~/ShreeDocs/Canada_Shrikant_CitizenCertificate.pdf">Citizenship Certificate</a></li>
+                    <li><a href="~/ShreeDocs/Canada_Shrikant_Citizenship_Card.pdf">Citizenship Card</a></li>
+                    <li><a href="~/ShreeDocs/Canada_Shrikant_Driver_License_BC.pdf">Driving License</a></li>
+                    <li><a href="~/ShreeDocs/Canada_JIBC_Security.PDF">JIBC Certificate</a></li>
+                    <li><a href="~/ShreeDocs/">Security License</a></li>
+                    <li><a href="~/ShreeDocs/">Income Tax Return</a></li>
+                    <li><a href="~/ShreeDocs/">Social Insurance Number</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">USA</a>
+                <ul>
+                    <li><a href="~/ShreeDocs/">H1_1998_2001</a></li>
+                    <li><a href="~/ShreeDocs/">H1_2001_2004</a></li>
+                    <li><a href="~/ShreeDocs/">Social Security Number</a></li>
+                    <li><a href="~/ShreeDocs/Infosys247_TN.PDF">TN_Infosys247</a></li>
+                    <li><a href="~/ShreeDocs/TN_VDart"></a></li>
+                    <li><a href="~/ShreeDocs/USA_HCL_Global_TN">TN_HCL_Global</a></li>
+                    <li><a href="~/ShreeDocs/">Income Tax Return</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">India</a>
+                <ul>
+                    <li><a href="~/ShreeDocs/India_Shrikant_BirthCertificate1.pdf">Birth Certificate</a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_BirthCert_Affidavit.pdf">Birth Afidavit</a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_OCI_Card.pdf">OCI Card</a></li>
+                    <li><a href="~/ShreeDocs/">PAN Card</a></li>
+                    <li><a href="~/ShreeDocs/">Adhar Card</a></li>
+                    <li><a href="~/ShreeDocs/">Driving License</a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_MarriageCertificate.pdf">Marriage Certificate</a></li>
+                    <li><a href="~/ShreeDocs/">Ration Card</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Experience</a>
+                <ul>
+                    <li><a href="~/ShreeDocs/USA_Experience_ATS.pdf">Atlanta Tech.</a></li>
+                    <li><a href="~/ShreeDocs/Canada_Experience_Trader_YellowPages2.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_Appointment_Orion_1.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_Experience_CCDalal.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_Experience_Nachmo1.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/India_Shrikant_Experience_NIC.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/USA_Experience_Goverment_WI_Wheda.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/USA_Experience_PSINet.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/USA_Experience_UltimateResouce.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/USA_Shrikant_HCL_America_Offer_Letter1.PDF"></a></li>
+                    <li><a href="~/ShreeDocs/USA_Shrikant_JNIT_Offer_Letter.PDF"></a></li>
+                    <li><a href="~/ShreeDocs/USA_Shrikant_MCS_Global_Offer_Letter.PDF"></a></li>
+                    <li><a href="~/ShreeDocs/TN1(HCL)_Petition.pdf"></a></li>
+                    <li><a href="~/ShreeDocs/"></a></li>
+                </ul>
+            </li>*@
+        </ul>
+        @*@Html.ActionLink("Devre Site", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+        @*<ul>@Html.ActionLink("ASP_Home", "Devre_Home_Web.aspx", "")</ul>
+            <ul>@Html.ActionLink("MVC_Home", "Index", "Home")</ul>*@
+        @*</div>*@
+    </div>
+</body>
+</html>
+

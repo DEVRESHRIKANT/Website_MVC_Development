@@ -1,0 +1,113 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>@ViewBag.Title - Devre Profile</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    @*<script src="/Scripts/foundation.min.js" type="text/javascript"></script>*@
+    @*<script src="http://code.jquery.com/jquery.js"></script>*@
+    @*<link href="/content/foundation.min.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    @*@Styles.Render("/Content")
+    @Scripts.Render("/Scripts")*@
+
+
+    @*<script>
+        $(document).foundation();
+    </script>*@
+</head>
+<body>
+    <form>
+        <div style="width:auto">
+            <div id="ShreeMenu" style="width:auto">
+                <table style="width:100%">
+                    <tr style="height:auto">
+                        <td style="width:100%; border:solid">                           
+                            <div>
+                                @Html.Partial("ShreeMenuBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="ShreeTop" style="width:auto">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div>                                
+                                @Html.Partial("ShreeTopBar")                               
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            @*<div id="ShreeBanner" style="padding:0">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:100%; border:solid">
+                        <div class="twelve columns">
+                            @Html.Partial("ShreeBannerBar")
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>*@
+
+            <div id="ShreeStatus" style="width:auto">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div>
+                                @Html.Partial("ShreeStatusBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Middle Section Details -->
+
+            <div style="width:auto">
+                <table style="border:solid; width:100%">
+                    <tr>
+                        <td style="vertical-align:top; width:10%; border:solid">
+                            <div id="ShreeLeft">
+                                @Html.Partial("ShreeLeftBar")
+                            </div>
+                        </td>
+                        <td style="vertical-align:top;  width:80%; border:solid">
+                            <div>
+                                @RenderBody()
+                                <hr />
+                            </div>
+                        </td>
+
+                        <td style="vertical-align:top; width:10%; border:solid">
+                            <div id="ShreeRight">
+                                @Html.Partial("ShreeRightBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Bottom Bar Header -->
+            <div id="ShreeBottom" style="width:auto">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div>
+                                @*<section id="ShreeBottom">*@
+                                @Html.Partial("ShreeBottomBar")
+                                @*</section>*@
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

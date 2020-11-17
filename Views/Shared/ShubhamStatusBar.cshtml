@@ -1,0 +1,47 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>@ViewBag.Title - Shubham Profile</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    @*<script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <link href="~/Content/" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />*@
+    <link href="~/css/shubh.css" rel="stylesheet" />
+    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")
+</head>
+<body>
+    <form>
+        <div id="ShubhamStatusBar" class="shubh-status-bar" >
+            <table style="background-color: gray">
+                <tr>
+                    <td style="width:20%; text-align:left">
+                        <div id="divCurrentPage" title="lblCurrentPage" style="border:medium">
+                            Current Page
+                        </div>
+                    </td>
+                    <td>
+                        <div id="divLastName" title="lblCurrentPage" style="border:medium">
+                            User Name
+                        </div>
+                    </td>
+                    <td>
+                        <div id="divEmailAddress" title="lblCurrentPage" style="border:medium">
+                            Email Address
+                        </div>
+                    </td>
+                    <td>
+
+                        <div id="divUserRole" title="lblCurrentPage" style="border:medium">
+                            User Role
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,157 @@
+﻿@{
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+<div>
+
+    <p>What's a 'test plan'? </p>
+    A software project test plan is a document that describes the objectives, scope, approach, and focus of a software testing effort. The process of preparing a test plan is a useful way to think through the efforts needed to validate the acceptability of a software product. The completed document will help people outside the test group understand the 'why' and 'how' of product validation. It should be thorough enough to be useful but not so overly detailed that no one outside the test group will read it. The following are some of the items that might be included in a test plan, depending on the particular project:
+    <br />•	Title
+    <br />•	Identification of software including version/release numbers
+    <br />•	Revision history of document including authors, dates, approvals
+    <br />•	Table of Contents
+    <br />•	Purpose of document, intended audience
+    <br />•	Objective of testing effort
+    <br />•	Software product overview
+    <br />•	Relevant related document list, such as requirements, design documents, other test plans, etc.
+    <br />•	Relevant standards or legal requirements
+    <br />•	Traceability requirements
+    <br />•	Relevant naming conventions and identifier conventions
+    <br />•	Overall software project organization and personnel/contact-info/responsibilties
+    <br />•	Test organization and personnel/contact-info/responsibilities
+    <br />•	Assumptions and dependencies
+    <br />•	Project risk analysis
+    <br />•	Testing priorities and focus
+    <br />•	Scope and limitations of testing
+    <br />•	Test outline - a decomposition of the test approach by test type, feature, functionality, process, system, module, etc. as applicable
+    <br />•	Outline of data input equivalence classes, boundary value analysis, error classes
+    <br />•	Test environment - hardware, operating systems, other required software, data configurations, interfaces to other systems
+    <br />•	Test environment validity analysis - differences between the test and production systems and their impact on test validity.
+    <br />•	Test environment setup and configuration issues
+    <br />•	Software migration processes
+    <br />•	Software CM processes
+    <br />•	Test data setup requirements
+    <br />•	Database setup requirements
+    <br />•	Outline of system-logging/error-logging/other capabilities, and tools such as screen capture software, that will be used to help describe and report bugs
+    <br />•	Discussion of any specialized software or hardware tools that will be used by testers to help track the cause or source of bugs
+    <br />•	Test automation - justification and overview
+    <br />•	Test tools to be used, including versions, patches, etc.
+    <br />•	Test script/test code maintenance processes and version control
+    <br />•	Problem tracking and resolution - tools and processes
+    <br />•	Project test metrics to be used
+    <br />•	Reporting requirements and testing deliverables
+    <br />•	Software entrance and exit criteria
+    <br />•	Initial sanity testing period and criteria
+    <br />•	Test suspension and restart criteria
+    <br />•	Personnel allocation
+    <br />•	Personnel pre-training needs
+    <br />•	Test site/location
+    <br />•	Outside test organizations to be utilized and their purpose, responsibilties, deliverables, contact persons, and coordination issues
+    <br />•	Relevant proprietary, classified, security, and licensing issues.
+    <br />•	Open issues
+    <br />•	Appendix - glossary, acronyms, etc.
+
+    <p>What's a 'test case'? </p>
+    A test case describes an input, action, or event and an expected response, to determine if a feature of a software application is working correctly. A test case may contain particulars such as test case identifier, test case name, objective, test conditions/setup, input data requirements, steps, and expected results. The level of detail may vary significantly depending on the organization and project context.
+    Note that the process of developing test cases can help find problems in the requirements or design of an application, since it requires completely thinking through the operation of the application. For this reason, it's useful to prepare test cases early in the development cycle if possible.
+
+    <p>Software Testing Life Cycle (STLC): Specifies the various stages of testing.</p>
+    <p>1.Requirements stage</p>
+    a.Requirement Specification documents
+    b.Functional Specification documents
+    c.Use case Documents
+    d.Test Trace-ability Matrix for identifying Test Coverage
+    <p>2.Test Plan</p>
+    a.Test Scope, Test Environment
+    b.Different Test phase and Test Methodologies
+    c.Manual and Automation Testing
+    d.Defect Mgmt, Configuration Mgmt, Risk Mgmt. Etc
+    <p>3.Test Design</p>
+    a.Test Case preparation.
+    b.Test Traceability Matrix for identifying Test Cases
+    c.Test case reviews and Approval
+    <p>4.Test Execution</p>
+    a.Executing Test cases
+    b.Capture, review and analyze Test Results
+    <p>5.Defect Tracking</p>
+    a.Find the defect & tracking for its closure.
+    <p>6.Bug Reporting</p>
+    a.Report the defect on tool/Excels
+    <p>7.Regression/retesting</p>
+
+    • Unit Test.
+    • System Test
+    • Integration Test
+    • Functional Test
+    • Performance Test
+    • Beta Test
+    • Acceptance Test.
+
+    <p>Unit Test</p>
+    The first test in the development process is the unit test. The source code is normally divided into modules, which in turn are divided into smaller units called units. These units have specific behavior. The test done on these units of code is called unit test. Unit test depends upon the language on which the project is developed. Unit tests ensure that each unique path of the project performs accurately to the documented specifications and contains clearly defined inputs and expected results.
+
+    <p>System Test</p>
+    Several modules constitute a project. If the project is long-term project, several developers write the modules. Once all the modules are integrated, several errors may arise. The testing done at this stage is called system test.
+    System testing ensures that the entire integrated software system meets requirements. It tests a configuration to ensure known and predictable results. System testing is based on process descriptions and flows, emphasizing pre-driven process links and integration points.
+    Testing a specific hardware/software installation. This is typically performed on a COTS (commercial off the shelf) system or any other system comprised of disparent parts where custom configurations and/or unique installations are the norm.
+
+    <p>Functional Test</p>
+    Functional test can be defined as testing two or more modules together with the intent of finding defects, demonstrating that defects are not present, verifying that the module performs its intended functions as stated in the specification and establishing confidence that a program does what it is supposed to do.
+
+    <p>Acceptance Testing</p>
+    Testing the system with the intent of confirming readiness of the product and customer acceptance.
+
+    <p>Ad Hoc Testing</p>
+    Testing without a formal test plan or outside of a test plan. With some projects this type of testing is carried out as an adjunct to formal testing. If carried out by a skilled tester, it can often find problems that are not caught in regular testing. Sometimes, if testing occurs very late in the development cycle, this will be the only kind of testing that can be performed. Sometimes ad hoc testing is referred to as exploratory testing.
+
+    <p>Alpha Testing</p>
+    Testing after code is mostly complete or contains most of the functionality and prior to users being involved. Sometimes a select group of users are involved. More often this testing will be performed in-house or by an outside testing firm in close cooperation with the software engineering department.
+
+    <p>Software Testing Types: </p>
+
+    <p>Black box testing – Internal system design is not considered in this type of testing. Tests are based on requirements and functionality.</p>
+
+    <p>White box testing – This testing is based on knowledge of the internal logic of an application’s code. Also known as Glass box Testing. Internal software and code working should be known for this type of testing. Tests are based on coverage of code statements, branches, paths, conditions.</p>
+
+    <p>Unit testing – Testing of individual software components or modules. Typically done by the programmer and not by testers, as it requires detailed knowledge of the internal program design and code. may require developing test driver modules or test harnesses.</p>
+
+    <p>Incremental integration testing – Bottom up approach for testing i.e continuous testing of an application as new functionality is added; Application functionality and modules should be independent enough to test separately. done by programmers or by testers.</p>
+
+    <p>Integration testing – Testing of integrated modules to verify combined functionality after integration. Modules are typically code modules, individual applications, client and server applications on a network, etc. This type of testing is especially relevant to client/server and distributed systems.</p>
+
+    <p>Functional testing – This type of testing ignores the internal parts and focus on the output is as per requirement or not. Black-box type testing geared to functional requirements of an application.</p>
+
+    <p>System testing – Entire system is tested as per the requirements. Black-box type testing that is based on overall requirements specifications, covers all combined parts of a system.</p>
+
+    <p>End-to-end testing – Similar to system testing, involves testing of a complete application environment in a situation that mimics real-world use, such as interacting with a database, using network communications, or interacting with other hardware, applications, or systems if appropriate.</p>
+
+    <p>Sanity testing - Testing to determine if a new software version is performing well enough to accept it for a major testing effort. If application is crashing for initial use then system is not stable enough for further testing and build or application is assigned to fix.</p>
+
+    <p>Regression testing – Testing the application as a whole for the modification in any module or functionality. Difficult to cover all the system in regression testing so typically automation tools are used for these testing types.</p>
+
+    <p>Acceptance testing -Normally this type of testing is done to verify if system meets the customer specified requirements. User or customer do this testing to determine whether to accept application.</p>
+
+    <p>Load testing – Its a performance testing to check system behavior under load. Testing an application under heavy loads, such as testing of a web site under a range of loads to determine at what point the system’s response time degrades or fails.</p>
+
+    <p>Stress testing – System is stressed beyond its specifications to check how and when it fails. Performed under heavy load like putting large number beyond storage capacity, complex database queries, continuous input to system or database load.</p>
+
+    <p>Performance testing – Term often used interchangeably with ‘stress’ and ‘load’ testing. To check whether system meets performance requirements. Used different performance and load tools to do this.</p>
+
+    <p>Usability testing – User-friendliness check. Application flow is tested, Can new user understand the application easily, Proper help documented whenever user stuck at any point. Basically system navigation is checked in this testing.</p>
+
+    <p>Install/uninstall testing - Tested for full, partial, or upgrade install/uninstall processes on different operating systems under different hardware, software environment.</p>
+
+    <p>Recovery testing – Testing how well a system recovers from crashes, hardware failures, or other catastrophic problems.</p>
+
+    <p>Security testing – Can system be penetrated by any hacking way. Testing how well the system protects against unauthorized internal or external access. Checked if system, database is safe from external attacks.</p>
+
+    <p>Compatibility testing – Testing how well software performs in a particular hardware/software/operating system/network environment and different combination s of above.</p>
+
+    <p>Comparison testing – Comparison of product strengths and weaknesses with previous versions or other similar products.</p>
+
+    <p>Alpha testing – In house virtual user environment can be created for this type of testing. Testing is done at the end of development. Still minor design changes may be made as a result of such testing.</p>
+
+    <p>Beta testing – Testing typically done by end-users or others. Final testing before releasing application for commercial purpose.</p>
+
+</div>
+
+

@@ -1,0 +1,44 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+<script src="http://code.jquery.com/jquery.js"></script>
+<link href="~/Content" rel="stylesheet" media="screen" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+@Styles.Render("/Content")
+@Scripts.Render("/Scripts")
+
+@*@Styles.Render("/css")
+@Scripts.Render("/js")
+@Scripts.Render("/bundles/modernizr")
+@Styles.Render("/Content/foundation/css")
+@Scripts.Render("/bundles/modernizr")
+@Scripts.Render("/bundles/jquery")
+@Scripts.Render("/bundles/foundation")
+@Scripts.Render("/bundles/bootstrap")
+@Styles.Render("~/Content/bootstrapcss")
+@Styles.Render("/Content/css")
+<script>
+    $(document).foundation();
+</script>*@
+
+<div id="ShreeBannerBar">
+    @*<img src="/Images/DoubleDekar.jpg" alt="Microsoft Technologies" style="height:350px; width:100%" />*@
+    <table style="width:100%; border:none; background-color:aqua" cellpadding="0" cellspacing="0">
+        <tr style="height:200px; width:100%">
+            <td style="width:25%">
+                <img src="/Images/Motel_Room1.jpg" style="height:200px; width:100%" />
+            </td>
+            <td style="width:25%">
+                <img src="~/Images/Motel_Bathroom1.jpg" style="height:200px; width:100%" />
+            </td>
+            <td style="width:25%">
+                <img src="~/Images/Motel_Amenities.jpg" style="height:200px; width:100%" />
+            </td>
+            <td style="width:25%">
+                <img src="/Images/Motel_Breakfast4.jpg" style="height:200px; width:100%" />
+            </td>
+        </tr>
+    </table>
+</div>

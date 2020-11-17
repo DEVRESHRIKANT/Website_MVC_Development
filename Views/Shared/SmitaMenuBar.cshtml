@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>@ViewBag.Title - Smita Profile</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    <link rel="stylesheet" href="~/css/smita.css" />
+    @*<script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+    *@
+</head>
+<body>
+    <form>
+        <div id="SmitaMenuBar" class="SmitaMenuBar">
+             @*style="width:auto; padding:0px">*@
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                    <ul>
+                        <li><a href="~/Home">Motel Home</a></li>
+                        <li><a href="~/SmitaVadnere">Smita</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Photos</a>
+                    <ul>
+                        @*<li><a href="/Role/GetAllUserRoles">Role Report</a></li>*@
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Videos</a>
+                    <ul>
+                        @*<li><a href="/Role/GetAllUserRoles">Role Report</a></li>*@
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Canada</a>
+                    <ul>
+                        @*<li><a href="~/SmitaDocs/Canada_Smita_Passport.pdf">Passport</a></li>*@
+                        @*<li><a href="~/SmitaDocs/Canada_Smita_Landing.pdf">Canada Landing</a></li>*@
+                        @*<li><a href="~/SmitaDocs/Canada_Smita_PermanatResidence.pdf">Pamanat Residence</a></li>*@
+                        @*<li><a href="~/SmitaDocs/Canada_Smita_Certificate_Citizenship.pdf">Citizenship Certificate</a></li>*@
+                        @*<li><a href="~/SmitaDocs/Smita_Citizenship_Card.pdf">Citizenship Card</a></li>*@
+                        <li><a href="">Driving License</a></li>
+                        <li><a href="">Security License</a></li>
+                        <li><a href="">Income Tax Return</a></li>
+                        @*<li><a href="~/SmitaDocs/Smita_CAN_SIN.pdf">Social Insurance Number</a></li>*@
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">USA</a>
+                    <ul>
+                        @*<li><a href="~/SmitaDocs/USA_Smita_H4_2001_2004_2.pdf">H4_2001_2004</a></li>*@
+                        @*<li><a href="~/SmitaDocs/USA_Smita_ITIN_1.pdf">ITIN_2001</a></li>*@
+                        @*<li><a href="~/SmitaDocs/USA_Smita_ITIN_Renewed.pdf">ITIN_2017</a></li>*@
+                        <li><a href="">TD_Infosys247</a></li>
+                        <li><a href="">TD_VDart</a></li>
+                        @*<li><a href="~/SmitaDocs/USA_Smita_TD_April_2019.JPG">TD_HCL_Global</a></li>*@
+                        <li><a href="">Income Tax Return</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">India</a>
+                    <ul>
+                        @*<li><a href="~/SmitaDocs/India_Smita_Certificate_Birth.pdf">Birth Certificate</a></li>*@
+                        <li><a href="">OCI Card</a></li>
+                        <li><a href="">PAN Card</a></li>
+                        <li><a href="">Adhar Card</a></li>
+                        <li><a href="">Driving License</a></li>
+                        @*<li><a href="~/SmitaDocs/India_Smita_Certificate_Marriage1.pdf">Marriage Certificate</a></li>*@
+                        <li><a href="">Affidavit Name</a></li>
+                        <li><a href="">Ration Card</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Education</a>
+                    <ul>
+                        <li>
+                            <a href="@Url.Content("~/SmitaDocs/India_Smita_Degree_TY.pdf")" target="_blank">Bachelor Degree</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Content("~/SmitaDocs/India_Smita_School_HscMark3.pdf")" target="_blank">High School Maksheet</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_Pers_Secr_2.pdf")" target="_blank">Company Secretary </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Content("~/SmitaDocs/India_Smita_Degree_BCom_Convocation.pdf")" target="_blank">BCom Convocation</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Certificate</a>
+                    <ul>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Degree_BCom_Convocation.pdf")" target="_blank">Swim </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Degree_BCom_Convocation.pdf")" target="_blank">Security </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_Sports1.pdf")" target="_blank">Sports1 </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_Sports2.pdf")" target="_blank">Sports2 </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_Sports3.pdf")" target="_blank">Sports3 </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_Sports4.pdf")" target="_blank">Sports4 </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_Math_VidyaPeeth.pdf")" target="_blank">Math Vidyapeeth </a></li>
+                        <li><a href="@Url.Content("~/SmitaDocs/India_Smita_Certificate_TypeSpeed.pdf")" target="_blank">Type Speed</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Experience</a>
+                    <ul>
+                        <li>
+                            <a href="@Url.Content("~/SmitaDocs/India_Experience_Saraf.pdf")" target="_blank">Saraf</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</form>
+</body>
+</html>
+

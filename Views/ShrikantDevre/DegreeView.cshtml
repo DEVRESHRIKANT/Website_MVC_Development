@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+<html>
+<head>
+    <title>Index</title>
+    <script type="text/javascript">
+        function ShowPDF() {
+            var myFilepath = document.getElementById('myFilepath');
+            window.open(myFilepath.value, 'Bachlour', "resizable=yes,scrollbars=yes,status=yes", 465, 255);
+        }
+    </script>
+</head>
+<body önload="javascript:ShowPDF();">
+    <div>
+        <iframe style="width:90%; height:90%" önloadeddata="ShowPDF()">
+            </iframe>
+        <input type="hidden" id="myFilepath" value='@ViewData["here is my file"]' />
+    </div>
+</body>
+</html>

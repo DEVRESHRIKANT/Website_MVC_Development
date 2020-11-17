@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterDevre.master.cs" Inherits="DEVRE.masterDevre" %>
+<%--    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")--%>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" src="js/JScript.js" ></script>
+    <link rel="SHORTCUT ICON" href="Images/Ohm1.ico"/>
+    <link href="~/DevreStyleSheet.css" rel="Stylesheet" type="text/css" />
+    <link href="~/Content" rel="stylesheet" media="screen" />
+
+    <asp:ContentPlaceHolder ID="cpl_HeadBar" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmDevreMaster" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="cpl_MenuBar" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <table style="width:100%; padding:0"">
+            <tr>
+                <td>
+                    <div id="ShreeTop" style="width:100%; padding:0; border:solid">    
+                        <asp:ContentPlaceHolder id="TopBar"  runat="server">
+                        </asp:ContentPlaceHolder>                  
+                    </div>
+                </td>    
+            </tr>
+        </table>
+        <div id="ShreeBanner" style="width:100%; padding:0; border:solid">
+            <asp:ContentPlaceHolder ID="BannerBar" runat="server">        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="ShreePictures" style="width:100%; padding:0; border:solid">
+            <asp:ContentPlaceHolder ID="Motel_Pictures" runat="server">        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="ShreeStatus" style="width:100%; padding:0; border:solid">
+            <asp:ContentPlaceHolder ID="StatusBar"  runat="server">        
+            </asp:ContentPlaceHolder>
+        </div>
+
+                <!-- Middle Section Details -->    
+        <table style="width:100%">
+        <tr style="padding:0">
+            <td style="border:solid; background-color:aqua; vertical-align:top; width:10%; padding:0">
+                <div id="ShreeLeft" style="vertical-align:top; padding:0">
+                    <asp:ContentPlaceHolder id="LeftBar_Shree_Web" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>            
+            <td style="border:solid; vertical-align:top; width:80%; padding:0">		
+
+        <div>
+            <asp:ContentPlaceHolder ID="cpl_MainContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+                    </td>
+            <td style="border:solid; background-color:aqua; vertical-align:top; width:10%; padding:0"">
+                <div id="ShreeRight" style="padding:0">    
+                    <asp:ContentPlaceHolder id="RightBar_Shree_Web" runat="server">                 
+                    </asp:ContentPlaceHolder>               
+                </div>
+             </td>
+        </tr>
+        </table>
+        <!-- Bottom Bar Header -->
+        <table style="width:100%; padding:0"">
+            <tr>
+                <td>
+                    <div id="ShreeBottom" style="width:100%; padding:0; border:solid">    
+                        <asp:ContentPlaceHolder id="BottomBar" runat="server">                                               
+                        </asp:ContentPlaceHolder>    
+                    </div>
+                </td>    
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

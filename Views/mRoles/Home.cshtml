@@ -1,0 +1,65 @@
+﻿@model System.Data.DataTable
+@*@model DEVRE.Models.RoleModel*@
+
+@using System.Data
+@using System.Data.SqlClient
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <form method="post" name="Display">
+        <h2>Home</h2>
+        @Html.ActionLink("Add New Record", "Insert")
+        <br />
+        @{
+            if (Model.Rows.Count > 0)
+            {
+                <table border="1">
+                    <tr>
+                        <th>RoleID</th>
+                        <th>RoleName</th>
+                        <th>ModifiedDate</th>
+                        <th>Status</th>
+                    </tr>
+
+                    @foreach (DataRow item in Model.Rows)
+                    {
+                        <tr>
+                            <td>@item["RoleId"]</td>
+                            <td>@item["RoleName"]</td>
+                            <td>@item["ModifiedDate"]</td>
+                            <td>@item["Status"]</td>
+                        </tr>
+                    }
+
+                    <tr>
+                        @*<td>@Html.ActionLink("Edit ", "Edit", new { RoleID =  item["RoleId"].ToString() })</td>
+                            <td>@Html.ActionLink("| Delete", "Delete", new { RoleID = item["RoleId"].ToString() })</td>*@
+                    </tr>
+                    }
+                </table>
+                <br />
+            }
+            else
+            {
+                <span> No records found!!</span>
+
+            }
+        }
+    </form>
+</body>
+</html>

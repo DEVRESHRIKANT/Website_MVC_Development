@@ -1,0 +1,115 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>@ViewBag.Title - Shrikant Profile</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")
+
+
+    @*<script src="/Scripts/foundation.min.js" type="text/javascript"></script>
+        <link href="/content/foundation.min.css" rel="stylesheet" type="text/css" />
+        <script>
+            $(document).foundation();
+        </script>*@
+    <style type="text/css">
+        ul {
+            list-style: none;
+            font-size: large;
+        }
+
+        li {
+        }
+
+        ul li {
+            display: block;
+            position: relative;
+            float: left;
+            border: 1px solid #000;
+        }
+
+        li ul {
+            display: none;
+        }
+
+        ul li a {
+            display: block;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #ff6a00;
+        }
+
+            ul li a:hover {
+                background: yellow;
+            }
+
+        li:hover ul {
+            display: block;
+            position: absolute;
+        }
+
+        li:hover li {
+            float: none;
+            margin: 0px;
+        }
+
+        li:hover a {
+        }
+
+        li:hover li a:hover {
+            background: yellow;
+        }
+
+        #drop-nav li ul li {
+            border-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="ShreeLeftBar" style="width:auto" cellpadding="0" cellspacing="0">
+            <table style="width:auto">
+                <tr>
+                    <td style="width:auto">
+                        <ul style="text-align:center; background-color:aqua; width:auto; font-size:medium">
+                            <li style="text-align:left; font-size:medium; background-color:aqua; width:auto; border:none">
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">PortFolios</a>
+                                <a href="@Url.Content("https://www.linkedin.com/in/devreshrikant/")" target="_blank">LinkedIn</a>
+                                <a href="@Url.Content("https://motelma.com/home/SHRIKANTDEVRE")" target="_blank">Personal Website</a>
+                                <a href="@Url.Content("https://github.com/DEVRESHRIKANT/Shree_Web_Automation.git")" target="_blank">GitHub Source Code</a>
+                                <a href="@Url.Content("https://dev.azure.com/devreshrikant/Shree/_git/Shree")" target="_blank">Cloud Azure Development</a>
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Canada Experience</a>
+                                <a href="@Url.Content("~/Documents/Canada_Experience_Trader_YellowPages2.pdf")" target="_blank">Trader Corporation</a>
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">USA Experience</a>
+                                <a href="@Url.Content("~/ShreeDocs/USA_Experience_ATS.pdf")" target="_blank">Atlanta Tech & Sys</a>
+                                <a href="@Url.Content("~/ShreeDocs/USA_Experience_PSINet.pdf")" target="_blank">MACWIS</a>
+                                <a href="@Url.Content("~/ShreeDocs/USA_Experience_UltimateResouce.pdf")" target="_blank">Ultimate Resource</a>
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Certification</a>
+                                <a href="@Url.Content("~/ShreeDocs/Microsoft_MCSD2.pdf")" target="_blank">Microsoft Professional(MCAD)</a>
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Assignments</a>
+                                <a href="@Url.Content("~/ShreeDocs/USA_Experience_K-Force_CSharp_Assesment.pdf" )" target="_blank">CSharp Tech Test</a>
+                                <a href="@Url.Content("~/ShreeDocs/Server_Configuration.pdf" )" target="_blank">Server Configuration</a>
+                                <a href="@Url.Content("~/ShreeDocs/Canada_PMP_Course_Certificate.PDF")" target="_blank">PMP Course Certificate</a>
+                                <a href="@Url.Content("~/ShreeDocs/Shree_Software_Dev_Plan.mpp")" target="_blank">Project Plan</a>
+                                <a href="@Url.Content("~/ShreeDocs/Project_Plan_Test.xlsx")" target="_blank">Test Plan</a>
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Education</a>
+                                <a href="@Url.Content("~/ShreeDocs/India_Shrikant_Degree_Certificate.pdf")" target="_blank">Bachelor Degree</a>
+                                <a href="@Url.Content("~/ShreeDocs/India_Shrikant_BhavansDegree.pdf")" target="_blank">Computer Management</a>
+                                <a href="@Url.Content("~/ShreeDocs/MBA_Marksheet.pdf")" target="_blank">Project Management</a>
+                                <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Reports</a>
+                                @Html.ActionLink("Roles", "", "Roles")
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

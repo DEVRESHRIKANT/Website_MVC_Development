@@ -1,0 +1,33 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+@Scripts.Render("/bundles/modernizr")
+@Styles.Render("/Content/foundation/css")
+@Scripts.Render("/bundles/modernizr")
+@Scripts.Render("/bundles/jquery")
+@Scripts.Render("/bundles/foundation")
+@Scripts.Render("/bundles/bootstrap")
+@Styles.Render("~/Content/bootstrapcss")
+@Styles.Render("/Content")
+@Styles.Render("/Scripts")
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+<script>
+    $(document).foundation();
+</script>
+<div>
+    <table style="width:100%; padding:0px 0px 0px 0px">
+        <tr>
+            <th border:solid="border:solid">
+                <img src="~/Images/Single_Double_House1.jpg" style="height:200px; width:100%" />
+                <img src="~/Images/Two_Storey_Parking1.jpg" style="height:200px; width:100%" />
+                <img src="~/Images/Single_Double_Pool3.jpg" style="height:200px; width:100%" />
+            </th>
+        </tr>
+    </table>
+</div>

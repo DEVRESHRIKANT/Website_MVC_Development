@@ -1,0 +1,52 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML>
+<title></title>
+<meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+<script src="http://code.jquery.com/jquery.js"></script>
+<link href="~/Content" rel="stylesheet" media="screen" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+@Styles.Render("/Content")
+@Scripts.Render("/Scripts")
+
+<div id="TopBar" class="container">
+    <table style="width:100%; border:none; background-color:aqua">
+        <tr style="width:100%;">
+            <td rowspan="4" style="width:10%; height:100px; background-color:aqua">
+                <img src="~/Images/Shree4.jpg" imagealign:left="imagealign:left" style="width:200px; height:100px" />
+            </td>
+            @*background-image:url(Investers2.jpg);*@
+            <td rowspan="4" style="width:55%; Height:100px;  font-size:200%; background-position: center center; font-weight: bold">
+                <div id="companyname" style="color:brown; font-size:larger; text-align:center">Green Valley Motel</div>
+            </td>
+            <td rowspan="4" style="width:35%; background-color:aqua; text-decoration:none; height:100px">
+                <div>
+                    <table style="width:100%; font-size:large">
+                        <tr style="background-color:aqua">
+                            <td>
+                                <div id="div5">1214 Simonds Road, Williamstown</div>
+                            </td>
+                        </tr>
+
+                        <tr style="background-color:aqua">
+                            <td>
+                                <div id="div2">Massachusetts-USA- 01267</div>
+                            </td>
+                        </tr>
+                        <tr style="background-color:aqua">
+                            <td>
+                                <div id="div4">Office: 413-458-3864</div>
+                            </td>
+                        </tr>
+
+                        <tr style="background-color:aqua">
+                            <td>
+                                <div id="div3">Email: book@motelma.com</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

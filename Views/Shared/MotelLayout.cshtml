@@ -1,0 +1,122 @@
+﻿@*@using System.Web.Optimization;*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Green Valley Motel - Williamstown, MA, USA</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")
+
+    @*<script>
+        $(document).foundation();
+    </script>*@
+</head>
+<body>
+    <form>
+        <div class="container">
+            @*<div class="row">*@
+                <div id="ShreeTop" style="padding:0">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:100%; padding:0">
+                                @*border:solid;*@
+                                <div class="twelve columns">
+                                    @*<section id="ShreeTop">*@
+                                    @Html.Partial("MotelMenuBar")
+                                    @*</section>*@
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="ShreeTop" style="padding:0">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:100%; border:solid; padding:0">
+                                <div class="twelve columns">
+                                    @*<section id="ShreeTop">*@
+                                    @Html.Partial("MotelTopBar")
+                                    @*</section>*@
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="ShreePictures" style="padding:0">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:100%; border:solid">
+                                <div class="twelve columns">
+                                    @Html.Partial("MotelBannerBar")
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="ShreeBanner" style="padding:0">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:100%; border:solid">
+                                <div class="twelve columns">
+                                    @Html.Partial("MotelOutside")
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- Middle Section Details -->
+                <div class="container">
+                    <div class="row">
+                        <table style="border:solid">
+                            <tr>
+                                <td style="padding:0; vertical-align:top" width:15%;=width:15%; border:solid">
+                                    <div id="ShreeLeft" class="four columns">
+                                        @Html.Partial("MotelLeftBar")
+                                    </div>
+                                </td>
+                                <td style="vertical-align:top;  padding:0; width:70%; border:solid">
+                                    <div id="InfoMiddle" class="four columns">
+                                        @RenderSection("featured", required: false)
+                                        <section class="content-wrapper main-content clear-fix">
+                                            @RenderBody()
+                                        </section>
+                                    </div>
+                                </td>
+                                <td style="padding:0; vertical-align:top" width:15%;=width:15%; border:solid">
+                                    <div id="ShreeRight" class="four columns">
+                                        @Html.Partial("MotelRightBar")
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Bottom Bar Header -->
+                <div id="ShreeBottom">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:100%; padding:0; border:solid">
+                                <div class="twelve columns">
+                                    @*<section id="ShreeBottom">*@
+                                    @Html.Partial("MotelBottomBar")
+                                    @*</section>*@
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            @*</div>*@
+        </div>
+    </form>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

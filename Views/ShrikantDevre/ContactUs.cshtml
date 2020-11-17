@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+<div>
+    <div style="font-size:xx-large; font-family:'Arial Rounded MT'; background-color:yellow; color:blueviolet">
+        <p>
+            Contact Us
+        </p>
+    </div>
+</div>
+<div>
+    <asp:Image ID="contactus" BorderColor="YellowGreen" BorderStyle="Outset" runat="server" ImageUrl="/Images/contactus.jpg" />
+</div>
+<div id="divResult" runat="server"></div>
+<div id="divError" runat="server"></div>
+<table border="1" style="width:100%">
+    <tr>
+        <td>
+            <asp:Label ID="lblPersonName" Runat="server">Name</asp:Label>
+        </td>
+        <td>
+            <asp:TextBox CssClass="fencyTextbox" ID="txtPersonName" Runat="server"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <asp:Label ID="lblEmail" Runat="server">EmailAddress:</asp:Label>
+        </td>
+        <td>
+            <asp:TextBox ID="txtEmail" CssClass="fencyTextbox" TextMode="SingleLine" Runat="server"></asp:TextBox>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <asp:Label ID="lblPhone" Runat="server">Phone:</asp:Label>
+        </td>
+        <td>
+            <asp:TextBox ID="txtPhone" CssClass="fencyTextbox" TextMode="SingleLine" Runat="server"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <asp:Label ID="lblSubject" Runat="server">Subject:</asp:Label>
+        </td>
+        <td>
+            <asp:TextBox ID="txtSubject" CssClass="fencyTextbox" TextMode="SingleLine" Runat="server"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <asp:Label ID="lblMessage" Runat="server">Message:</asp:Label>
+        </td>
+        <td>
+            <asp:TextBox ID="txtMessage" CssClass="fencyTextbox" TextMode="MultiLine" Height="100px" Width="300px" Runat="server"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <asp:Button ID="btnSendInfo" Runat="server" OnClick="BtnSendInfo_Click" Text="Send Information"></asp:Button>
+        </td>
+    </tr>
+    <%--
+    <tr>
+        <td style=" color:aqua"><asp:Label ID="lblThanks" runat="server" /></td>
+        <td></td>
+    </tr>--%>
+</table>
+
+

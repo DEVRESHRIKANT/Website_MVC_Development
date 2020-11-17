@@ -1,0 +1,104 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <link href="~/Content/" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")
+</head>
+<body>
+    <form>
+        <div id="Khushi_Layout">
+            <div id="KhushiMenuBar" style="width:100%; padding:0">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div id="KhushiMenuBar" style="width:100%; padding:0">
+                                @Html.Partial("KhushiMenuBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="KhushiTopBar" style="width:100%">
+                <table style="width:100%" cellpadding="0" cellspacing="0" background-color="aqua">
+                    <tr style="padding:0">
+                        <td style="border:solid; width:100%">
+                            <div id="KhushiTopBar" style="width:100%; padding:0">
+                                @Html.Partial("KhushiTopBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            @*<div id="ShreeBanner" style="padding:0">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:100%; border:solid">
+                                <div class="twelve columns">
+                                    @Html.Partial("ShreeBannerBar")
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>*@
+
+        <div id="KhushiStatusBar" style="width:100%"  border="solid">
+            <table style="width:100%" background-color="aqua">
+                <tr>
+                    <td>
+                        <div id="KhushiStatusBar">
+                            @Html.Partial("KhushiStatusBar")
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+            <!-- Middle Section Details -->
+            <div style="width:auto">
+                <table style="border:solid; width:100%">
+                    <tr>
+                        <td style="vertical-align:top; width:10%; border:solid">
+                            <div id="KhushiLeftBar" style="width:auto">
+                                @Html.Partial("KhushiLeftBar")
+                            </div>
+                        </td>
+                        <td style="vertical-align:top; width:80%; border:solid">
+                            <div id="KhushiMiddleBar" style="width:auto">
+                                @RenderBody()
+                                <hr />
+                            </div>
+                        </td>
+                        <td style="vertical-align:top; width:10%; border:solid">
+                            <div id="KhushiRightBar" style="width:auto">
+                                @Html.Partial("KhushiRightBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- Bottom Bar Header -->
+            <div id="KhushiBottomBar" style="width:100%">
+                <table style="width:100%" height="10px">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div id="KhushiBottomBar">
+                                @Html.Partial("KhushiBottomBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

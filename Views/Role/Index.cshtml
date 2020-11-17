@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DEVRE.Models.RoleModel>
+
+@{
+    ViewBag.Title = "UserRole";
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+
+<h2>UserRole</h2>
+
+<p>
+    @Html.ActionLink("Create New Role", "AddUserRole")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "UpdateUserRole", new { id=item.RoleId }) |
+            @Html.ActionLink("Details", "DetailUserRole", new { id=item.RoleId }) |
+            @Html.ActionLink("Delete", "DeleteUserRole", new { id=item.RoleId })
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,53 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+@*@Styles.Render("/css")
+    @Scripts.Render("/js")
+    @Scripts.Render("/bundles/modernizr")
+    @Styles.Render("/Content/foundation/css")
+    @Scripts.Render("/bundles/modernizr")
+    @Scripts.Render("/bundles/jquery")
+    @Scripts.Render("/bundles/foundation")
+    @Scripts.Render("/bundles/bootstrap")
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("/Content/css")*@
+
+@Styles.Render("/Content")
+@Scripts.Render("/Scripts")
+
+<meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+<script src="http://code.jquery.com/jquery.js"></script>
+<link href="~/Content" rel="stylesheet" media="screen" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+@*<script>
+                $(document).foundation();
+    </script>*@
+
+<div id="SmitaStatusBar" style="width:auto; padding:0">
+    <table style="background-color: gray; width:100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width:20%; text-align:left">
+                <div id="divCurrentPage" title="lblCurrentPage" style="border:medium">
+                    Current Page
+                </div>
+            </td>
+            <td>
+                <div id="divLastName" title="lblCurrentPage" style="border:medium">
+                    User Name
+                </div>
+            </td>
+            <td>
+                <div id="divEmailAddress" title="lblCurrentPage" style="border:medium">
+                    Email Address
+                </div>
+            </td>
+            <td>
+                <div id="divUserRole" title="lblCurrentPage" style="border:medium">
+                    User Role
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

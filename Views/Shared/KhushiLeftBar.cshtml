@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <link href="~/Content/" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
+    @Styles.Render("/Content")
+    @Scripts.Render("/Scripts")
+</head>
+<body>
+    <form>
+        <div id="KhushiLeftBar" style="width:auto"  cellpadding="0" cellspacing="0">
+            <ul style="text-align:center; background-color:aqua; font-size:medium">
+                <li style="text-align:left; font-size:medium; background-color:aqua; border:none">
+                    <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">PortFolios</a>
+                    <a href="@Url.Content("https://www.linkedin.com/in/khushidevre/")" target="_blank">LinkedIn</a>
+                    <a href="@Url.Content("https://motelma.com/KhushiDevre")" target="_blank">Personal Website</a>
+                    <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Canada Experience</a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">Atul Shah</a>
+                    <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">India Experience</a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">Saraf</a>
+                    <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Certification</a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">Swim </a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">Security </a>
+                    <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Education</a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">Bachelor Degree</a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">High School Maksheet</a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">Company Secretary </a>
+                    <a href="@Url.Content("~/KhushiDocs/.pdf")" target="_blank">BCom Convocation</a>
+                </li>
+            </ul>
+        </div>
+    </form>
+</body>
+</html>

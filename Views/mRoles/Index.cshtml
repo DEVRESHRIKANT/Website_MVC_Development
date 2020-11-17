@@ -1,0 +1,113 @@
+﻿@using DEVRE.Models
+@model IEnumerable<DEVRE.Models.RoleModel>
+
+@{
+    ViewBag.Title = "UserRole";
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
+}
+<div>
+    <h2>All Roles</h2>
+    <table class="table">
+        <tr>
+            <th>
+                RoleName
+            </th>
+            <th>
+                ModifiedDate
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h2>Search by ID</h2>
+    <input type="text" id="RoleId" size="5" />
+    <input type="button" value="SearchRole" onclick="find();" />
+    <p id="blog" />
+
+    <h1>Add Role</h1>
+    Id:
+    <input type="text" id="RoleId" /><br />
+    Name:
+    <input type="text" id="RoleName" /><br />
+    Date:
+    <input type="text" id="ModifiedDate" /><br />
+    <input type="button" value="AddUserRole" onclick="add();" />
+</div>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Send an AJAX request
+        $.ajax({
+            url: 'http://localhost:52738/api/mRoles?type=json',
+            type: "GET",
+            data: {},
+            dataType: "json",
+            success: function (result) {
+                // On success, 'data' contains a list of products.
+                var htmlContent = "";
+
+                $.each(result, function (key, item) {
+                    htmlContent = htmlContent + "<tr><td>" + item.RoleId + "</td><td>" + item.RoleName + "</td><td>" + item.ModifiedDate + "</td></tr>";
+                });
+
+                // Appending HTML content
+                $('#roles').append(htmlContent);
+            },
+            error: function (err) {
+                alert(err.statusText);
+            }
+        });
+    });
+
+    function add() {
+        var Id = $('#RoleId').val();
+        var Name = $('#RoleName').val();
+        var Url = $('#ModifiedDate').val();
+        var blogData = { "RoleId": RoleId, "RoleName": RoleName, "ModifiedDate": ModifiedDate };
+        //roleData = { "blogObj": roleData };
+        alert(JSON.stringify(roleData));
+
+        $.ajax({
+            url: 'http://localhost:52738/api/mRoles?type=json',
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(roleData),
+            dataType: "json",
+            success: function (result) {
+                // On success, 'data' contains a list of products.
+                var htmlContent = "";
+
+                $("#role > tbody > tr").remove();
+
+                $.each(result, function (key, item) {
+                    htmlContent = htmlContent + "<tr><td>" + item.RoleId + "</td><td>" + item.RoleName + "</td><td>" + item.ModifiedDate + "</td></tr>";
+                });
+
+                // Appending HTML content
+                $('#roles').append(htmlContent);
+            },
+            error: function (err) {
+                alert(err.statusText);
+            }
+        });
+    }
+
+    function find() {
+        var id = $('#RoleId').val();
+        $.getJSON('http://localhost:52738/api/mRoles/' + id + '?type=json')
+            .done(function (data) {
+                var htmlContent = "<b>Role</b>: " + data.RoleName + "<br/>" + "<b>Url</b>:" + data.ModifiedDatge;
+                $('#role').html(htmlContent);
+            })
+            .fail(function (jqXHR, textStatus, err) {
+                $('#role').text('Error: ' + err);
+            });
+    }
+</script>
