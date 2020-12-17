@@ -1,91 +1,84 @@
-﻿@*@using System.Web.Optimization*@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
+    <title></title>
     <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
-    @*<script src="http://code.jquery.com/jquery.js"></script>
-    <link href="~/Content" rel="stylesheet" media="screen" />
-    <link href="~/Content/" rel="stylesheet" type="text/css" />*@
-    @*<script src="~/Scripts/bootstrap.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />*@
-    <link href="~/css/shubh.css" rel="stylesheet" />
-    @*@Styles.Render("/Content")
-    @Scripts.Render("/Scripts")*@
+    @*<link href="~/css/shubh.css" rel="stylesheet"/>*@
 </head>
 <body>
     <form>
-        <div id="Shubh_Layout" class="shubh-layout">
-            <div id="ShubhamMenuBar" class="shubh-menu-bar">
-                @*<table style="width:100%">
-                    <tr>
+        <div id="Shubham_Layout" class="Shubham_Layout" style="width:auto">
+            <div id="ShubhamMenuBar" class="ShubhamMenuBar" style="width:auto">
+                <table style="width:100%">
+                    <tr style="height:auto">
                         <td style="width:100%; border:solid">
-                            <div id="ShubhamMenuBar" style="width:100%; padding:0">*@
+                            <div class="ShubhamMenuBar">
                                 @Html.Partial("ShubhamMenuBar")
-                            @*</div>
-                        </td>
-                    </tr>
-                </table>*@
-            </div>
-
-            <div id="ShubhamTopBar" class="shubh-top-bar" >
-                @*<table>
-                    <tr>
-                        <td>
-                            <div id="ShubhamTopBar">*@
-                                @Html.Partial("ShubhamTopBar")
-                            @*</div>
-                        </td>
-                    </tr>
-                </table>*@
-            </div>           
-            <div id="ShubhamStatusBar" class="shubh-status-bar">
-                @*<table>
-                    <tr>
-                        <td>
-                            <div id="ShubhamStatusBar">*@
-                                @Html.Partial("ShubhamStatusBar")
-                            @*</div>
-                        </td>
-                    </tr>
-                </table>*@
-            </div>
-
-            <!-- Middle Section Details -->
-            <div>
-                <table>
-                    <tr>
-                        <td >
-                            <div id="ShubhamLeftBar" class="shubh-left-bar">
-                                @Html.Partial("ShubhamLeftBar")
-                            </div>
-                        </td>
-                        <td >
-                            <div >
-                                @RenderBody()
-                                <hr />
-                            </div>
-                        </td>
-                        <td >
-                            <div id="ShubhamRightBar" class="shubh-right-bar" >
-                                @Html.Partial("ShubhamRightBar")
                             </div>
                         </td>
                     </tr>
                 </table>
             </div>
-        <!-- Bottom Bar Header -->
-        <div id="ShubhamBottomBar" class="shubh-bottom-bar" >
-            @*<table >
-                <tr>
-                    <td >*@
-                        @*<div>*@
-                            @Html.Partial("ShubhamBottomBar")
-                        @*</div>*@
-                    @*</td>
-                </tr>
-            </table>*@
+            <div id="ShubhamTopBar" class="ShubhamTopBar" style="width:auto">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div>
+                                @Html.Partial("ShubhamTopBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ShubhamStatusBar" class="ShubhamStatusBar" style="width:auto">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div>
+                                @Html.Partial("ShubhamStatusBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Middle Section Details -->
+            <div id="ShubhamMiddleBar" class="ShubhamMiddleBar">
+                <table style="border:solid; width:100%">
+                    <tr>
+                        <td style="vertical-align:top; width:10%; border:solid">
+                            <div id="ShubhamLeftBar" class="ShubhamLeftBar">
+                                @Html.Partial("ShubhamLeftBar")
+                            </div>
+                        </td>
+                        <td style="vertical-align:top; width:80%; border:solid">
+                            <div id="ShubhamMiddleBar" class="ShubhamMiddleBar">
+                                @RenderBody()
+                                <hr />
+                            </div>
+                        </td>
+                        <td style="vertical-align:top; width:10%; border:solid">
+                            <div id="ShubhamRightBar" class="ShubhamRightBar">
+                                @Html.Partial("ShubhamRightBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- Bottom Bar Header -->
+            <div id="ShubhamBottomBar" class="ShubhamBottomBar" style="width:auto">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:100%; border:solid">
+                            <div id="ShubhamBottomBar">
+                                @Html.Partial("ShubhamBottomBar")
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 </body>
 </html>

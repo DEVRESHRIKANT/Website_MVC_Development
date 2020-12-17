@@ -1,176 +1,136 @@
-﻿@*@using System.Web.Optimization*@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
-    <title>@ViewBag.Title - Shubham Profile</title>
+    <title></title>
     <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
-    <link href="~/css/shubh.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/shubh.css" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <link href="~/Content" rel="stylesheet" media="screen" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
 
-    @*<script src="http://code.jquery.com/jquery.js"></script>
-              <link href="~/Content" rel="stylesheet" media="screen" />
-              <link href="~/Content/" rel="stylesheet" type="text/css" />
-              <script src="~/Scripts/bootstrap.min.js"></script>
-              <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
-              <link href="~/css/shubh.css" rel="stylesheet" />
-              @Styles.Render("/Content")
-              @Scripts.Render("/Scripts")
-        <style type="text/css">
-          /*ul {
-          list-style: none;
-          font-size: large;
-          padding: 0px,0px,0px,0px;
-          margin: 0px,0px,0px,0px;
-          }
+    <style type="text/css">
+        ul {
+            list-style: none;
+            font-size: large;
+            padding: 0px,0px,0px,0px;
+            margin: 0px,0px,0px,0px;
+        }
 
-          li {
-          padding: 0px,0px,0px,0px;
-          margin: 0px,0px,0px,0px;
-          }
+        li {
+            padding: 0px,0px,0px,0px;
+            margin: 0px,0px,0px,0px;
+        }
 
-          ul li {
-          padding: 0px,0px,0px,0px;
-          margin: 0px,0px,0px,0px;
-          display: block;
-          position: relative;
-          float: left;
-          border: 1px solid #000;
-          }
+        ul li {
+            padding: 0px,0px,0px,0px;
+            margin: 0px,0px,0px,0px;
+            display: block;
+            position: relative;
+            float: left;
+            border: 1px solid #000;
+        }
 
-          li ul {
-          padding: 0px,0px,0px,0px;
-          margin: 0px,0px,0px,0px;
-          display: none;
-          }
+        li ul {
+            padding: 0px,0px,0px,0px;
+            margin: 0px,0px,0px,0px;
+            display: none;
+        }
 
-          ul li a {
-          display: block;
-          margin: 0px,0px,0px,0px;*/
-          /*            padding: 5px 10px 5px 10px;
-          */ /*padding: 0px 0px 0px 0px;
-          text-decoration: none;
-          white-space: nowrap;
-          color: #ff6a00;
-          }
+        ul li a {
+            display: block;
+            margin: 0px,0px,0px,0px;
+            /*            padding: 5px 10px 5px 10px;
+        */ padding: 0px 0px 0px 0px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #ff6a00;
+        }
 
-          ul li a:hover {
-          background: yellow;
-          }
+            ul li a:hover {
+                background: yellow;
+            }
 
-          li:hover ul {
-          display: block;
-          position: absolute;
-          }
+        li:hover ul {
+            display: block;
+            position: absolute;
+        }
 
-          li:hover li {
-          float: none;
-          margin: 0px;
-          }
+        li:hover li {
+            float: none;
+            margin: 0px;
+        }
 
-          li:hover a {
-          }
+        li:hover a {
+        }
 
-          li:hover li a:hover {
-          background: yellow;
-          }
+        li:hover li a:hover {
+            background: yellow;
+        }
 
-          #drop-nav li ul li {
-          border-top: 0px;
-          }*/
-          @*</style>*@
+        #drop-nav li ul li {
+            border-top: 0px;
+        }
+    </style>
 </head>
 <body>
     <form>
-        <div id="ShubhamMenuBar" class="shubh-menu-bar">           
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                        <ul>
-                            <li><a href="~/Home">Motel Home</a></li>
-                            <li><a href="~/ShubhamDevre">Shubham</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Photos</a>
-                        <ul>
-                            <li><a href="/">Birthday 2008</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Videos</a>
-                        <ul>
-                            <li><a href="/">Birthday 2008</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Canada</a>
-                        <ul>
-                            <li><a href="~/ShubhDocs/.pdf">Passport</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Canada Landing</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Pamanat Residence</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Citizenship Certificate</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Citizenship Card</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Driving License</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Security License</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Income Tax Return</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Social Insurance Number</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">USA</a>
-                        <ul>
-                            @*<li><a href="~/ShubhDocs/.pdf">H4_2001_2004</a></li>*@
-                            @*<li><a href="~/ShubhDocs/.pdf">ITIN_2001</a></li>*@
-                            @*<li><a href="~/ShubhDocs/.pdf">ITIN_2017</a></li>*@
-                            <li><a href="~/ShubhDocs/.pdf">Income Tax Return</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">India</a>
-                        <ul>
-                            <li><a href="~/ShubhDocs/.pdf">Birth Certificate</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">OCI Card</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">PAN Card</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Adhar Card</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Driving License</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Affidavit Name</a></li>
-                            <li><a href="~/ShubhDocs/.pdf">Ration Card</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Education</a>
-                        <ul>
-                            <li>
-                                <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Bachelor Degree</a>
-                            </li>
-                            <li>
-                                <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">High School Maksheet</a>
-                            </li>
-                            <li>
-                                <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Company Secretary </a>
-                            </li>
-                            <li>
-                                <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">BCom Convocation</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Certificate</a>
-                        <ul>
-                            <li><a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Swim </a></li>
-                            <li><a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Security </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Experience</a>
-                        <ul>
-                            <li>
-                                <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Saraf</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>       
+        <div id="ShubhamMenuBar" class="ShubhamMenuBar" style="width:auto; padding:0px">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                    <ul>
+                        <li><a href="~/Home">Motel</a></li>
+                        <li><a href="~/shubhamdevre">Shubham</a></li>
+                    </ul>
+                </li>                
+                <li>
+                    <a href="#">Canada</a>
+                    <ul>
+                        <li><a href="~/ShubhDocs/Canada_Shubham_Pass_2021.pdf">Passport</a></li>
+                        <li><a href="~/ShubhDocs/Canada_Shubham_landing.pdf">Canada Landing</a></li>
+                        <li><a href="~/ShubhDocs/Canada_Shubham_PR_Card.pdf">Pamanat Residence</a></li>
+                        <li><a href="~/ShubhDocs/Shubham_Citizenship_Card.pdf">Citizenship Certificate</a></li>
+                        <li><a href="~/ShubhDocs/Shubham_Citizenship_Card.pdf">Citizenship Card</a></li>
+                        <li><a href="~/ShubhDocs/">Social Insurance Number</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">USA</a>
+                    <ul>
+                        <li><a href="~/ShubhDocs/">Birth Certificate</a></li>
+                        <li><a href="~/ShubhDocs/">Social Insurance</a></li>
+                        <li><a href="~/ShubhDocs/">Birth State Certificate</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">India</a>
+                    <ul>
+                        @*<li><a href="~/SmitaDocs/India_Smita_Certificate_Birth.pdf">Birth Certificate</a></li>*@
+                        <li><a href="~/ShubhDocs/">OCI Card</a></li>
+                        <li><a href="~/ShubhDocs/">PAN Card</a></li>
+                        <li><a href="~/ShubhDocs/">Adhar Card</a></li>
+                        <li><a href="~/ShubhDocs/">Driving License</a></li>
+                        <li><a href="~/ShubhDocs/">Affidavit Name</a></li>
+                        <li><a href="~/ShubhDocs/">Ration Card</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Education</a>
+                    <ul>
+                        <li>
+                            <a href="@Url.Content("~/ShubhDocs/")" target="_blank">Report Card</a>
+                        </li>                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Certificate</a>
+                    <ul>
+                        <li><a href="@Url.Content("~/ShubhDocs/")" target="_blank">Swim</a></li>
+                    </ul>
+                </li>              
+            </ul>
+        </div>
     </form>
 </body>
 </html>
-

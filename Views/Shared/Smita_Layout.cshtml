@@ -3,20 +3,15 @@
 <head>
     <title>@ViewBag.Title - Smita Profile</title>
     <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
-    <link href="~/css/smita.css" rel="stylesheet"/>
+    @*<link href="~/css/smita.css" rel="stylesheet"/>*@
 </head>
 <body>
     <form>
-        <div id="Smita_Layout" class="Smita_Layout">
-             @*style="width:auto">*@
-            <div id="SmitaMenuBar" class="SmitaMenuBar">
-                 @*style="width:auto">*@
-                <table>
-                       @*style="width:100%">*@
-                    <tr>
-                        @*style="height:auto">*@
-                        <td>
-                            @*style="width:100%">*@ 
+        <div id="Smita_Layout" class="Smita_Layout" style="width:auto">      
+            <div id="SmitaMenuBar" class="SmitaMenuBar" style="width:auto">           
+                <table style="width:100%">
+                    <tr style="height:auto">
+                        <td style="width:100%; border:solid">
                             <div class="SmitaMenuBar">
                                 @Html.Partial("SmitaMenuBar")
                             </div>
@@ -24,13 +19,10 @@
                     </tr>
                 </table>
             </div>
-
-            <div id="SmitaTopBar" class="SmitaTopBar">
-                @*style="width:auto">*@
-                <table>
+            <div id="SmitaTopBar" class="SmitaTopBar" style="width:auto">              
+                <table style="width:100%">
                     <tr>
-                        <td>
-                            @*style="width:100%">*@
+                        <td style="width:100%; border:solid">                           
                             <div>
                                 @Html.Partial("SmitaTopBar")
                             </div>
@@ -38,13 +30,10 @@
                     </tr>
                 </table>
             </div>
-            <div id="SmitaStatusBar" class="SmitaStatusBar">
-                 @*style="width:auto">*@
-                <table>
-                    @*style="width:100%">*@
+            <div id="SmitaStatusBar" class="SmitaStatusBar" style="width:auto">
+                <table style="width:100%">
                     <tr>
-                        <td>
-                            @*style="width:100%">*@
+                        <td style="width:100%; border:solid">
                             <div>
                                 @Html.Partial("SmitaStatusBar")
                             </div>
@@ -55,25 +44,20 @@
 
             <!-- Middle Section Details -->
             <div id="SmitaMiddleBar" class="SmitaMiddleBar">
-                 @*style="width:auto">*@
-                <table>
-                    @*style="border:solid; width:100%">*@
+                <table style="border:solid; width:100%">                    
                     <tr>
-                        <td>
-                            @*style="vertical-align:top; width:10%">*@
+                        <td style="vertical-align:top; width:10%; border:solid">                            
                             <div id="SmitaLeftBar" class="SmitaLeftBar">
                                 @Html.Partial("SmitaLeftBar")
                             </div>
                         </td>
-                        <td>
-                            @*style="vertical-align:top; width:80%; border:solid">*@
+                        <td style="vertical-align:top; width:80%; border:solid">                           
                             <div id="SmitaMiddleBar" class="SmitaMiddleBar">
                                 @RenderBody()
                                 <hr />
                             </div>
                         </td>
-                        <td>
-                            @*style="vertical-align:top; width:10%">*@
+                        <td style="vertical-align:top; width:10%; border:solid">                            
                             <div id="SmitaRightBar" class="SmitaRightBar">
                                 @Html.Partial("SmitaRightBar")
                             </div>
@@ -83,12 +67,10 @@
 
             </div>
             <!-- Bottom Bar Header -->
-            <div id="SmitaBottomBar" class="SmitaBottomBar">
-                 @*style="width:auto">*@
-                <table>
-                       @*style="width:100%">*@
+            <div id="SmitaBottomBar" class="SmitaBottomBar" style="width:auto">
+                <table style="width:100%">
                     <tr>
-                        <td>
+                        <td style="width:100%; border:solid">
                             @*style="width:100%">*@
                             <div id="SmitaBottomBar">
                                 @Html.Partial("SmitaBottomBar")

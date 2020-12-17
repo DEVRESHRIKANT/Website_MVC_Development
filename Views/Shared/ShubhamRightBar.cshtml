@@ -1,15 +1,9 @@
-﻿@*@using System.Web.Optimization*@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
+    <title>@ViewBag.Title - Shubham Profile</title>
     <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <link href="~/Content" rel="stylesheet" media="screen" />
-    <link href="~/Content/" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
-    @Styles.Render("/Content")
-    @Scripts.Render("/Scripts")
+    <link href="~/css/shubh.css" rel="stylesheet" />
 
     <style type="text/css">
         ul {
@@ -67,35 +61,35 @@
 </head>
 <body>
     <form>
-        <div id="ShubhamRightBar" class="shubh-right-bar" style="width:auto"  cellpadding="0" cellspacing="0">
-            <ul style="text-align:center; background-color:aqua; font-size:medium">
-                <li style="text-align:left; background-color:aqua; font-size:medium;  border:none">
+        <div id="ShubhamRightBar" class="ShubhamRightBar">
+            <ul>
+                <li>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Canada</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Passport</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Canada Landing</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Permanant Residence</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Citizenship Certificate</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Citizenship Card</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Driving License</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Security License</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Income Tax Return</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Social Security Number</a>
+                    <a href="@Url.Content("~/ShubhDocs/Canada_Smita_Passport.pdf")" target="_blank">Passport</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Canada Landing</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Permanant Residence</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Citizenship Certificate</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Citizenship Card</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Driving License</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Security License</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Income Tax Return</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Social Security Number</a>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">USA</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">H4_2001_2004</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">ITIN_2001</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">ITIN_2017</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">TD_Infosys247</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">TD_VDart</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">TD_HCL_Global</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Income Tax Return</a>
+                    <a href="@Url.Content("~/ShubhDocs/USA_Smita_H4_2001_2004_2.pdf")" target="_blank">H4_2001_2004</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">ITIN_2001</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">ITIN_2017</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">TD_Infosys247</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">TD_VDart</a>
+                    <a href="@Url.Content("~/ShubhDocs/USA_Smita_TD_April_2019.pdf")" target="_blank">TD_HCL_Global</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Income Tax Return</a>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">India</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">OCI Card</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">PAN Card</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Adhar Card</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Driving License</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Marriage Certificate</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Affidavit Name</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Ration Card</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">OCI Card</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">PAN Card</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Adhar Card</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Driving License</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Marriage Certificate</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Affidavit Name</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Ration Card</a>
                 </li>
             </ul>
         </div>

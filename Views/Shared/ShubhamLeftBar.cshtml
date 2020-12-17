@@ -1,38 +1,89 @@
-﻿@*@using System.Web.Optimization*@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>@ViewBag.Title - LeftBar</title>
     <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
-    <link href="~/css/shubh.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/shubh.css" />
+    <style type="text/css">
+        ul {
+            list-style: none;
+            font-size: large;
+        }
 
-    @*<script src="http://code.jquery.com/jquery.js"></script>
-        <link href="~/Content" rel="stylesheet" media="screen" />
-        <link href="~/Content/" rel="stylesheet" type="text/css" />
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
-        @Styles.Render("/Content")
-        @Scripts.Render("/Scripts")*@
+        li {
+        }
+
+        ul li {
+            display: block;
+            position: relative;
+            float: left;
+            border: 1px solid #000;
+        }
+
+        li ul {
+            display: none;
+        }
+
+        ul li a {
+            display: block;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #ff6a00;
+        }
+
+            ul li a:hover {
+                background: yellow;
+            }
+
+        li:hover ul {
+            display: block;
+            position: absolute;
+        }
+
+        li:hover li {
+            float: none;
+            margin: 0px;
+        }
+
+        li:hover a {
+        }
+
+        li:hover li a:hover {
+            background: yellow;
+        }
+
+        #drop-nav li ul li {
+            border-top: 0px;
+        }
+    </style>
 </head>
 <body>
     <form>
-        <div id="ShubhamLeftBar" class="shubh-left-bar">
-            <ul style="text-align:center; background-color:aqua; font-size:medium">
-                <li style="text-align:left; font-size:medium; background-color:aqua; border:none">
+        <div id="ShubhamLeftBar" class="ShubhamLeftBar" style="width:auto" cellpadding="0" cellspacing="0">
+            <ul>
+                <li>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">PortFolios</a>
                     <a href="@Url.Content("https://www.linkedin.com/in/shubhamdevre/")" target="_blank">LinkedIn</a>
-                    <a href="@Url.Content("https://motelma.com/ShubhamDevre")" target="_blank">Personal Website</a>
+                    <a href="@Url.Content("https://motelma.com/shubhamdevre")" target="_blank">Personal Website</a>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Canada Experience</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Atul Shah</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Atul Shah</a>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">India Experience</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Saraf</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Experience_Saraf.pdf")" target="_blank">Saraf</a>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Certification</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Swim </a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Security </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Degree_BCom_Convocation.pdf")" target="_blank">Swim </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Degree_BCom_Convocation.pdf")" target="_blank">Security </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_Sports1.pdf")" target="_blank">Sports1 </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_Sports2.pdf")" target="_blank">Sports2 </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_Sports3.pdf")" target="_blank">Sports3 </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_Sports4.pdf")" target="_blank">Sports4 </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_Math_VidyaPeeth.pdf")" target="_blank">Math Vidyapeeth </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_TypeSpeed.pdf")" target="_blank">Type Speed</a>
                     <a href="#" style="font-family:Arial; font-size:larger; background-color:coral; color:firebrick">Education</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Bachelor Degree</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">High School Maksheet</a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">Company Secretary </a>
-                    <a href="@Url.Content("~/ShubhDocs/.pdf")" target="_blank">BCom Convocation</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Degree_TY.pdf")" target="_blank">Bachelor Degree</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_School_HscMark3.pdf")" target="_blank">High School Maksheet</a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Certificate_Pers_Secr_2.pdf")" target="_blank">Company Secretary </a>
+                    <a href="@Url.Content("~/ShubhDocs/India_Smita_Degree_BCom_Convocation.pdf")" target="_blank">BCom Convocation</a>
                 </li>
             </ul>
         </div>

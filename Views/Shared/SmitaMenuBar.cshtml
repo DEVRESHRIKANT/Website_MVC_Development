@@ -4,48 +4,47 @@
     <title>@ViewBag.Title - Smita Profile</title>
     <meta name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0" />
     <link rel="stylesheet" href="~/css/smita.css" />
-    @*<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
     <link href="~/Content" rel="stylesheet" media="screen" />
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />
-    *@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" media="screen" />    
 </head>
-<body>
+    <body>
     <form>
         <div id="SmitaMenuBar" class="SmitaMenuBar">
              @*style="width:auto; padding:0px">*@
             <ul>
-                <li>
-                    <a href="#">Home</a>
-                    <ul>
-                        <li><a href="~/Home">Motel Home</a></li>
-                        <li><a href="~/SmitaVadnere">Smita</a></li>
-                    </ul>
-                </li>
-                <li>
+                @*<li>
+            <a href="#">Home</a>
+            <ul>
+                <li><a href="~/Home">Motel Home</a></li>
+                <li><a href="~/SmitaVadnere">Smita</a></li>
+            </ul>
+        </li>*@
+                <!--<li>
                     <a href="#">Photos</a>
-                    <ul>
+                    <ul>-->
                         @*<li><a href="/Role/GetAllUserRoles">Role Report</a></li>*@
-                    </ul>
+                    <!--</ul>
                 </li>
                 <li>
                     <a href="#">Videos</a>
-                    <ul>
+                    <ul>-->
                         @*<li><a href="/Role/GetAllUserRoles">Role Report</a></li>*@
-                    </ul>
-                </li>
+                    <!--</ul>
+                </li>-->
                 <li>
                     <a href="#">Canada</a>
                     <ul>
-                        @*<li><a href="~/SmitaDocs/Canada_Smita_Passport.pdf">Passport</a></li>*@
-                        @*<li><a href="~/SmitaDocs/Canada_Smita_Landing.pdf">Canada Landing</a></li>*@
-                        @*<li><a href="~/SmitaDocs/Canada_Smita_PermanatResidence.pdf">Pamanat Residence</a></li>*@
-                        @*<li><a href="~/SmitaDocs/Canada_Smita_Certificate_Citizenship.pdf">Citizenship Certificate</a></li>*@
-                        @*<li><a href="~/SmitaDocs/Smita_Citizenship_Card.pdf">Citizenship Card</a></li>*@
-                        <li><a href="">Driving License</a></li>
-                        <li><a href="">Security License</a></li>
-                        <li><a href="">Income Tax Return</a></li>
-                        @*<li><a href="~/SmitaDocs/Smita_CAN_SIN.pdf">Social Insurance Number</a></li>*@
+                        <li><a href="~/SmitaDocs/Canada_Smita_Passport.pdf">Passport</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_Landing.pdf">Canada Landing</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_PermanatResidence.pdf">Pamanat Residence</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_Certificate_Citizenship.pdf">Citizenship Certificate</a></li>
+                        <li><a href="~/SmitaDocs/Smita_Citizenship_Card.pdf">Citizenship Card</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_License_Driving.pdf">Driving License</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_Security_License.pdf">Security License</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_2019_ASSESED_NOA.pdf">2019 Tax Return</a></li>
+                        <li><a href="~/SmitaDocs/Canada_Smita_SIN.pdf">Social Insurance Number</a></li>
                     </ul>
                 </li>
                 <li>
@@ -55,9 +54,9 @@
                         @*<li><a href="~/SmitaDocs/USA_Smita_ITIN_1.pdf">ITIN_2001</a></li>*@
                         @*<li><a href="~/SmitaDocs/USA_Smita_ITIN_Renewed.pdf">ITIN_2017</a></li>*@
                         <li><a href="">TD_Infosys247</a></li>
-                        <li><a href="">TD_VDart</a></li>
+                        <li><a href="~/SmitaDocs/USA_Smita_TD_April_2019_VDart.pdf">TD_VDart</a></li>
                         @*<li><a href="~/SmitaDocs/USA_Smita_TD_April_2019.JPG">TD_HCL_Global</a></li>*@
-                        <li><a href="">Income Tax Return</a></li>
+                        <li><a href="~/SmitaDocs/USA_Smita_2019_1040NR_Bob.pdf">2019 Tax Return</a></li>
                     </ul>
                 </li>
                 <li>
@@ -104,10 +103,26 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Experience</a>
+                    <a href="#">IncomeTax</a>
                     <ul>
                         <li>
-                            <a href="@Url.Content("~/SmitaDocs/India_Experience_Saraf.pdf")" target="_blank">Saraf</a>
+                            <a href="@Url.Content("~/SmitaDocs/USA_Smita_2019_1040NR_Bob.pdf")" target="_blank">2019</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Motel</a>
+                    <ul>
+                        <li>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">Finance - Transfers</a>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">Opening</a>
+                            <a href="@Url.Content("~/b.pdf")" target="_blank">Yearly Permits</a>
+                            <a href="@Url.Content("~/b.pdf")" target="_blank">Federal Tax</a>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">State Tax Connect</a>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">Partners K1</a>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">Incomes</a>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">Expenses</a>
+                            <a href="@Url.Content("~/.pdf")" target="_blank">Merchant Statment</a>
                         </li>
                     </ul>
                 </li>
