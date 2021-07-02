@@ -20,9 +20,8 @@ namespace DEVRE.Controllers
             return View(RoleRepo.GetAllUserRoles());
         }
         // GET: Role/GetAllUserRoles    
-        public ActionResult GetAllUserRoles()
+        public ActionResult GetAllUserRoles()       
         {
-
             UserRolesRepository RoleRepo = new UserRolesRepository();
             ModelState.Clear();
             return View(RoleRepo.GetAllUserRoles());
@@ -66,14 +65,13 @@ namespace DEVRE.Controllers
 
         // POST: Role/UpdateUserRole/5    
         [HttpPost]
-
         public ActionResult UpdateUserRole(int id, RoleModel obj)
         {
             try
             {
                 UserRolesRepository RoleRepo = new UserRolesRepository();
                 RoleRepo.UpdateUserRole(obj);
-                return RedirectToAction("GetAllUserRoles");
+               return RedirectToAction("GetAllUserRoles");
             }
             catch
             {
@@ -90,7 +88,6 @@ namespace DEVRE.Controllers
 
         // POST: Role/DetailUserRole/5    
         [HttpPost]
-
         public ActionResult DetailUserRole(int id, RoleModel obj)
         {
             try

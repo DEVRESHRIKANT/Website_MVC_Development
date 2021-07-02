@@ -25,18 +25,14 @@ namespace DEVRE.Repository
             string ConnString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
             con = new SqlConnection(ConnString);
         }
-        //To Add Employee details    
+        //To Add UserRole details    
         public bool AddUserRole(RoleModel objRole)
         {
             connection();
-            //SqlCommand com = new SqlCommand("ssp_AddNewRoleDetails", con);
             SqlCommand com = new SqlCommand("ssp_InsertRole", con);
-
-
             com.CommandType = CommandType.StoredProcedure;
             objRole.Status = true;
             objRole.ModifiedDate = DateTime.Now;
-
             com.Parameters.AddWithValue("@RoleName", objRole.RoleName);
             com.Parameters.AddWithValue("@ModifiedDate", objRole.ModifiedDate);
             com.Parameters.AddWithValue("@Status", objRole.Status);
@@ -55,13 +51,11 @@ namespace DEVRE.Repository
         }
 
         //To view employee details with generic list
-        public List<RoleModel> GetAllUserRoles()
+       public List<RoleModel> GetAllUserRoles()
         {
             connection();
             List<RoleModel> RoleList = new List<RoleModel>();
-            //SqlCommand com = new SqlCommand("ssp_GetUserRoles", con);
             SqlCommand com = new SqlCommand("ssp_ListRoles", con);
-
             com.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
@@ -69,7 +63,7 @@ namespace DEVRE.Repository
             da.Fill(dt);
             con.Close();
 
-            //Bind EmpModel generic list using dataRow     
+            //Bind RoleModel generic list using dataRow     
             foreach (DataRow dr in dt.Rows)
             {
                 RoleList.Add(
@@ -84,14 +78,12 @@ namespace DEVRE.Repository
             }
             return RoleList;
         }
-        //To Update Employee details    
+        //To Update Role details    
         public bool UpdateUserRole(RoleModel obj)
         {
 
             connection();
-            //SqlCommand com = new SqlCommand("UpdateRoleDetails", con);
             SqlCommand com = new SqlCommand("ssp_UpdateRole", con);
-
             com.CommandType = CommandType.StoredProcedure;
             obj.Status = true;
             obj.ModifiedDate = DateTime.Now;
@@ -116,12 +108,8 @@ namespace DEVRE.Repository
         {
 
             connection();
-            //SqlCommand com = new SqlCommand("UpdateRoleDetails", con);
             SqlCommand com = new SqlCommand("ssp_DetailRole", con);
-
             com.CommandType = CommandType.StoredProcedure;
-            //obj.Status = true;
-            //obj.ModifiedDate = DateTime.Now;
             com.Parameters.AddWithValue("@RoleId", obj.RoleId);
             com.Parameters.AddWithValue("@RoleName", obj.RoleName);
             com.Parameters.AddWithValue("@ModifiedDate", obj.ModifiedDate);
@@ -142,11 +130,9 @@ namespace DEVRE.Repository
         public bool DeleteUserRole(int Id)
         {
             connection();
-            //SqlCommand com = new SqlCommand("DeleteRoleById", con);
             SqlCommand com = new SqlCommand("ssp_DeleteRole", con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@RoleId", Id);
-
             con.Open();
             int i = com.ExecuteNonQuery();
             con.Close();

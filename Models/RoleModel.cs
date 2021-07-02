@@ -16,15 +16,19 @@ namespace DEVRE.Models
     using System.Data;
     using System.Data.SqlClient;
     using System.ComponentModel.DataAnnotations;
-    using DEVRE.Controllers;   
-    
+    using DEVRE.Controllers;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public class RoleModel
     {		
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RoleId { get; set; }
+        [MaxLength(250)]
         public string RoleName { get; set; }
         public bool Status { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
+
         //public string StmtType { get; set; }
         //public string buttonText { get; set; }
         //public string Message { get; set; }

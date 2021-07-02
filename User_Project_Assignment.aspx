@@ -97,8 +97,22 @@
           <FooterTemplate>
               </table>
           </FooterTemplate>
-      </asp:Repeater>
-      <asp:SqlDataSource ConnectionString="Data Source=SHRIKANT;Initial Catalog=Shree_Database;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework"
+      </asp:Repeater>    
+      
+                <!--Local Database - Surface Connection-->
+<%--      <asp:SqlDataSource ConnectionString="Data Source=SHRIKANT;Initial Catalog=Shree_Database;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework"
+          ID="SqlDataSourceUser_Project_Assignment" runat="server"
+          SelectCommand="SELECT [ProjectID],[UserID] FROM [tbl_ProjectUser]" ProviderName="System.Data.SqlClient">
+      </asp:SqlDataSource>--%>
+
+    <!--Local Database - HP Connection-->
+      <%--<asp:SqlDataSource ConnectionString="Data Source=KHUSHU;Initial Catalog=Shree_Database;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework"
+          ID="SqlDataSourceUser_Project_Assignment" runat="server"
+          SelectCommand="SELECT [ProjectID],[UserID] FROM [tbl_ProjectUser]" ProviderName="System.Data.SqlClient">
+      </asp:SqlDataSource>--%>
+
+    <!--Production Database - MotelMa Connection-->
+      <asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002;"
           ID="SqlDataSourceUser_Project_Assignment" runat="server"
           SelectCommand="SELECT [ProjectID],[UserID] FROM [tbl_ProjectUser]" ProviderName="System.Data.SqlClient">
       </asp:SqlDataSource>

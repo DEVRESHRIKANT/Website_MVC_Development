@@ -17,8 +17,14 @@ namespace DEVRE
 {
     public class ShreeLibrary
     {
+        //Production Database - MotelMa Connection
         //public const string ConnString = @"Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002;";
-        public const string ConnString = @"Data Source=SHRIKANT; Database=Shree_Database; Integrated Security=True;";
+         
+        //Local Database - Surface Connection
+        //public const string ConnString = @"Data Source=SHRIKANT; Database=Shree_Database; Integrated Security=True;";
+        
+        //Local Database - HP Connection
+        public const string ConnString = @"Data Source=KHUSHU; Database=Shree_Database; Integrated Security=True;";
 
         public ShreeLibrary()
         { }

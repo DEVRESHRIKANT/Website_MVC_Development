@@ -75,15 +75,22 @@
               </table>
           </FooterTemplate>
       </asp:Repeater>
-    <asp:SqlDataSource ConnectionString = "Data Source=SHRIKANT; Database=Shree_Database; Integrated Security=True;"  
+    <!--Local Database - HP Connection-->
+    <%--<asp:SqlDataSource ConnectionString = "Data Source=KHUSHU; Database=Shree_Database; Integrated Security=True;"  
             id="SqlDataSourceUserRole" runat="server"                 
             SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole] WHERE STATUS='1'">
-      </asp:SqlDataSource>
-
-<%--    <asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002"
+      </asp:SqlDataSource>--%>
+    
+    <!--Local Database - Surface Connection-->
+    <%--<asp:SqlDataSource ConnectionString = "Data Source=SHRIKANT; Database=Shree_Database; Integrated Security=True;"  
+            id="SqlDataSourceUserRole" runat="server"                 
+            SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole] WHERE STATUS='1'">
+      </asp:SqlDataSource>--%>
+    <!--Production Database - MotelMa Connection-->
+    <asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002"
           ID="SqlDataSourceUserRole" runat="server" 
           SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole] WHERE STATUS='1'" ProviderName="System.Data.SqlClient">
-    </asp:SqlDataSource>--%>
+    </asp:SqlDataSource>
                          
         </td>
         </tr>                                  

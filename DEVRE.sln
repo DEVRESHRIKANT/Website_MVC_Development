@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEVRE", "DEVRE.csproj", "{38ED0A9B-05B1-493F-A91B-23B382843D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEVRE.Tests", "..\DEVRE.Tests\DEVRE.Tests.csproj", "{95A729D0-8003-4DDE-807E-A3CA98185FC4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{38ED0A9B-05B1-493F-A91B-23B382843D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38ED0A9B-05B1-493F-A91B-23B382843D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38ED0A9B-05B1-493F-A91B-23B382843D60}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95A729D0-8003-4DDE-807E-A3CA98185FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95A729D0-8003-4DDE-807E-A3CA98185FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95A729D0-8003-4DDE-807E-A3CA98185FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95A729D0-8003-4DDE-807E-A3CA98185FC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

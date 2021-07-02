@@ -126,8 +126,13 @@
           ID="SqlDataSourceProjectReport" runat="server" 
           SelectCommand="SELECT [ProjectID],[UserID], [ProjectName],[Domain], [Technology], [Details], [Project_Start_Dt], [Project_End_Dt] FROM [tbl_Projects]" ProviderName="System.Data.SqlClient">
       </asp:SqlDataSource>
-      <%--<asp:SqlDataSource 
-          ConnectionString=
+
+      <%--        <asp:SqlDataSource ConnectionString="Data Source=KHUSHU;Initial Catalog=Shree_Database;Integrated Security=True; MultipleActiveResultSets=True;"
+          ID="SqlDataSourceProjectReport" runat="server" 
+          SelectCommand="SELECT [ProjectID],[UserID], [ProjectName],[Domain], [Technology], [Details], [Project_Start_Dt], [Project_End_Dt] FROM [tbl_Projects]" ProviderName="System.Data.SqlClient">
+      </asp:SqlDataSource>--%>
+     
+       <%--<asp:SqlDataSource ConnectionString=
               "Data Source=Data Source=DEVRE\SQLSERVER14;Initial Catalog=Shree_Database;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework"
           ID="SqlDataSource1" runat="server" 
           SelectCommand="SELECT [ProjectID],[UserID], [ProjectName],[Domain], [Technology], [Details], [Project_Start_Dt], [Project_End_Dt] FROM [tbl_Projects]" ProviderName="System.Data.SqlClient">

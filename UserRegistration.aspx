@@ -213,16 +213,23 @@
               </table>
           </FooterTemplate>
       </asp:Repeater>
-      <asp:SqlDataSource 
-          ConnectionString="Data Source= SHRIKANT; Database=Shree_Database; Integrated Security = True; MultipleActiveResultSets=True;"
-          ID="SqlDataSourceUserRegistration" runat="server" 
-          SelectCommand="SELECT [UserID], [EmailAddress],[RoleId],[ProjectId],[PhoneNumber],[Domain],[Technology] FROM [tbl_Users]" ProviderName="System.Data.SqlClient">
-      </asp:SqlDataSource>
-                                          
-      <%--<asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002;"
+    <%--<asp:SqlDataSource 
+          ConnectionString="Data Source= KHUSHU; Database=Shree_Database; Integrated Security = True; MultipleActiveResultSets=True;"
           ID="SqlDataSourceUserRegistration" runat="server" 
           SelectCommand="SELECT [UserID], [EmailAddress],[RoleId],[ProjectId],[PhoneNumber],[Domain],[Technology] FROM [tbl_Users]" ProviderName="System.Data.SqlClient">
       </asp:SqlDataSource>--%>
+      
+      <%--<asp:SqlDataSource 
+          ConnectionString="Data Source= SHRIKANT; Database=Shree_Database; Integrated Security = True; MultipleActiveResultSets=True;"
+          ID="SqlDataSourceUserRegistration" runat="server" 
+          SelectCommand="SELECT [UserID], [EmailAddress],[RoleId],[ProjectId],[PhoneNumber],[Domain],[Technology] FROM [tbl_Users]" ProviderName="System.Data.SqlClient">
+      </asp:SqlDataSource>--%>
+
+           <!--Production Database - MotelMa Connection-->                                
+      <asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002;"
+          ID="SqlDataSourceUserRegistration" runat="server" 
+          SelectCommand="SELECT [UserID], [EmailAddress],[RoleId],[ProjectId],[PhoneNumber],[Domain],[Technology] FROM [tbl_Users]" ProviderName="System.Data.SqlClient">
+      </asp:SqlDataSource>
         </td>           
     </tr>                                  
     </table>    

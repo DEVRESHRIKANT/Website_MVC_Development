@@ -73,20 +73,21 @@
               </table>
           </FooterTemplate>
       </asp:Repeater>
-
-<%--      <asp:SqlDataSource 
-          ConnectionString=
-              "Data Source=Shree365.db.12017601.hostedresource.com;Initial Catalog=Shree365;User ID=Shree365;Password=kHUSHI2002#;MultipleActiveResultSets=True;Application Name=EntityFramework"
-          ID="SqlDataSourceUserRole" runat="server" 
-          SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole]" ProviderName="System.Data.SqlClient">
+     <%-- <asp:SqlDataSource ConnectionString="Data Source=KHUSHU;Initial Catalog=Shree_Database;Integrated Security=True; MultipleActiveResultSets=True;"
+          ID="SqlDataSourceRoleReport" 
+          runat="server" 
+          SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole]" 
+          ProviderName="System.Data.SqlClient">
       </asp:SqlDataSource>            --%>
-<%--          Data Source= DEVRE; Database=Shree_Database; Integrated Security = True; MultipleActiveResultSets=True;"--%>
-      <asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002;"
-          ID="SqlDataSourceRoleReport" runat="server" 
-          SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole]" ProviderName="System.Data.SqlClient">
-      </asp:SqlDataSource>            
 
-        </td>   
+      <asp:SqlDataSource ConnectionString="Data Source=184.168.47.13;Initial Catalog=motelma;Integrated Security=False; User ID=khushi;Password=kHUSHI2002;"
+          ID="SqlDataSourceRoleReport" 
+          runat="server" 
+          SelectCommand="SELECT [RoleID], [RoleName] FROM [tbl_UserRole]" 
+          ProviderName="System.Data.SqlClient">
+      </asp:SqlDataSource> 
+
+         </td>   
         </tr>
         </table>
     </asp:Panel>

@@ -52,7 +52,7 @@ namespace DEVRE.Controllers
             return listRole.First(e => e.RoleId == id);  
             SqlDataReader reader = null;
             SqlConnection myConnection = new SqlConnection();
-            myConnection.ConnectionString = @"Data Source=SHRIKANT;Database=Shree_Database; Integrated Security=True;";
+            myConnection.ConnectionString = @"Data Source=KHUSHU;Database=Shree_Database; Integrated Security=True;";
 
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
@@ -79,7 +79,7 @@ namespace DEVRE.Controllers
         //POST: /api/products
         public HttpResponseMessage PostUserRole([FromBody] RoleModel UserRole_TB)
         {
-            conn.ConnectionString = @"Data Source=DEVRE; Database=Shree_Database; Integrated Security=True;'";
+            conn.ConnectionString = @"Data Source=KHUSHU; Database=Shree_Database; Integrated Security=True;'";
 
             string sqlText = "Insert into tbl_UserRole values(@RoleId,@RoleName,@ModifiedDate,@Status)";
             SqlCommand sqlCmd = new SqlCommand(sqlText, conn);
@@ -98,7 +98,7 @@ namespace DEVRE.Controllers
         //PUT: /api/products/id
         public void PutUserRole(RoleModel UserRole_TB)
         {
-            conn.ConnectionString = @"Data Source=DEVRE; Database=Shree_Database; Integrated Security=True;'";
+            conn.ConnectionString = @"Data Source=KHUSHU; Database=Shree_Database; Integrated Security=True;'";
             string sqlText = "update tbl_UserRole set RoleId=@RoleId,RoleName=@RoleName,ModifiedDate=@ModifiedDate,Status=@Status";
             SqlCommand sqlCmd = new SqlCommand(sqlText, conn);
             sqlCmd.Parameters.AddWithValue("@RoleId", UserRole_TB.RoleId);
@@ -119,7 +119,7 @@ namespace DEVRE.Controllers
 
 
             SqlConnection myConnection = new SqlConnection();
-            myConnection.ConnectionString = @"Data Source=SHRIKANT; Database=Shree_Database; Integrated Security=True;'";
+            myConnection.ConnectionString = @"Data Source=KHUSHU; Database=Shree_Database; Integrated Security=True;'";
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "INSERT INTO tbl_UserRole (RoleId,RoleName,ModifiedDate,Status) Values (@RoleId,@RoleName,@ModifiedDate,@Status)";
@@ -140,7 +140,7 @@ namespace DEVRE.Controllers
         public void DeleteUserRoleByID(int id)
         {
             SqlConnection myConnection = new SqlConnection();
-            myConnection.ConnectionString = @"Data Source=DEVRE; Database=Shree_Database; Integrated Security=True;'";
+            myConnection.ConnectionString = @"Data Source=KHUSHU; Database=Shree_Database; Integrated Security=True;'";
 
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
@@ -149,8 +149,6 @@ namespace DEVRE.Controllers
             myConnection.Open();
             int rowDeleted = sqlCmd.ExecuteNonQuery();
             myConnection.Close();
-        }
-
-        
+        }        
     }
 }

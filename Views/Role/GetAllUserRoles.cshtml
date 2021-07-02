@@ -36,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.ModifiedDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RoleId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RoleId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RoleId })
+            @Html.ActionLink("Edit", "UpdateUserRole", new { id=item.RoleId }) |
+            @Html.ActionLink("Details", "DetailUserRole", new { id=item.RoleId }) |
+            @Html.ActionLink("Delete", "DeleteUserRole", new { id=item.RoleId })
         </td>
     </tr>
 }

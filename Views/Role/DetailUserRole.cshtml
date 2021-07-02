@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "DetailUserRole";
-    Layout = "~/Views/Shared/Smita_Layout.cshtml";
+    Layout = "~/Views/Shared/Devre_Layout.cshtml";
 }
 
 <h2>DetailUserRole</h2>
@@ -38,6 +38,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.RoleId }) |
+    @Html.ActionLink("Edit", "DetailUserRole", new { id = Model.RoleId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
